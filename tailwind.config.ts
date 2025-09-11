@@ -7,11 +7,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily :{
-        satoshi: ["Satoshi", "sans-serif"],
-        playfair: ["PlayfairDisplay", "sans"],
-        playfairItalic: ["PlayfairDisplayItalic", "sans"],
-      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
