@@ -1,0 +1,11 @@
+---
+const { label, link } = Astro.props;
+---
+
+<a
+  class="flex-1 text-center py-3 md:py-4 border-t"
+  href={link}
+  aria-label={label}
+>
+  <p>{label}</p>
+</a>

@@ -1,0 +1,18 @@
+---
+import ProjectLink from "@components/projects/ProjectLink.astro";
+
+const { title, description, website, repository } = Astro.props;
+---
+
+<div class="border-2">
+  <div class="py-3">
+    <h3 class="text-xl text-center">{title}</h3>
+  </div>
+  <p class="px-3 py-2">
+    {description}
+  </p>
+  <div class="flex flex-col md:flex-row">
+    <ProjectLink label="Go to project" link={website} />
+    {repository && <ProjectLink label="View repository" link={repository} />}
+  </div>
+</div>
