@@ -1,7 +1,22 @@
 ---
 import ProjectLink from "@components/projects/ProjectLink.astro";
+import { Image } from "astro:assets";
 
-const { title, description, website, repository } = Astro.props;
+interface Props {
+  title: string;
+  description: string;
+  website: {
+    href: string;
+    external?: boolean;
+  };
+  repository?: string;
+  image: {
+    src: ImageMetadata;
+    alt: string;
+  };
+}
+
+const { title, description, website, repository, image } = Astro.props;
 ---
 
 <div class="border-2">
@@ -11,8 +26,13 @@ const { title, description, website, repository } = Astro.props;
   <p class="px-3 py-2">
     {description}
   </p>
+  {image && <Image src={image.src} alt={image.alt} />}
   <div class="flex flex-col md:flex-row">
-    <ProjectLink label="Go to project" link={website} />
-    {repository && <ProjectLink label="View repository" link={repository} />}
+    <ProjectLink
+      label="Go to project"
+      href={website.href}
+      external={website.external}
+    />
+    {repository && <ProjectLink label="View repository" href={repository} />}
   </div>
 </div>

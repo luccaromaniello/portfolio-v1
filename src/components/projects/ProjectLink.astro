@@ -1,10 +1,16 @@
 ---
-const { label, link } = Astro.props;
+interface Props {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+const { label, href, external = false } = Astro.props;
 ---
 
 <a
   class="flex-1 text-center py-3 md:py-4 border-t"
-  href={link}
+  href={href}
   aria-label={label}
 >
   <p>{label}</p>

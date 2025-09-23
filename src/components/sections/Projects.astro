@@ -6,6 +6,7 @@ import {
   PROJECT_ODIN_REPO_URL,
   PROJECT_DESIGN_LIVE_URL,
 } from "@constants";
+import designArchiveImage from "@assets/overview-v0-portfolio.png";
 ---
 
 <div id="projects">
@@ -14,7 +15,7 @@ import {
     <ProjectCard
       title="The Odin Project"
       description="A collection of 27 challenges created during The Odin Project, a full‑stack web‑development curriculum."
-      website={PROJECT_ODIN_LIVE_URL}
+      website={{ href: PROJECT_ODIN_LIVE_URL }}
       repository={PROJECT_ODIN_REPO_URL}
     />
     <ProjectCard
@@ -22,7 +23,11 @@ import {
       description=`The first version of this portfolio showcases my past design work.
       Some items are password protected, but I’m happy to provide access upon
       request.`
-      website={PROJECT_DESIGN_LIVE_URL}
+      website={{ href: PROJECT_DESIGN_LIVE_URL, external: true }}
+      image={{
+        src: designArchiveImage,
+        alt: "An overview of the first version of Lucca's portfolio.",
+      }}
     />
   </div>
 </div>
