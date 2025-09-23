@@ -1,25 +1,53 @@
 ---
---- 
-<div class="flex flex-col md:flex-row gap-8 w-full min-h-screen px-8 py-8">
-  <img class="background absolute top-0 left-0 w-full h-full brightness-20 grayscale"></img> 
-  <div class="relative flex flex-col md:flex-row w-full h-screen items-center text-white">
-    <div class="flex flex-col gap-24 w-2/3">
-      <div class="flex flex-col gap-4 font-playfair">
-        <h1 class="2xl:text-9xl uppercase font-bold leading-30">Lucca Romaniello</h1>
-        <h2 class="2xl:text-2xl uppercase font-satoshi leading-snug font-light">Full Stack Engineer with product design background</h2>
-      </div>
-      <div class="flex flex-col gap-2 leading-relaxed description 2xl:text-xl font-light pr-24">
-        <p>
-          Blending engineering expertise and design sensibility across startups and global teams for 6+ years. 
-        </p>
-        <p>
-          Based in Brazil, working globally. Open to full-time and freelance opportunities.
-        </p>
-      </div>
+import videoSrc from "../assets/placeholder-bg.mp4";
+---
+
+<video
+  autoplay
+  loop
+  muted
+  class="absolute top-0 left-0 w-full h-full brightness-50 grayscale object-cover"
+>
+  <source src={videoSrc} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+<div
+  class="relative flex flex-col md:flex-row w-full h-screen items-center text-white min-h-screen px-8 py-8"
+>
+  <div class="flex flex-col gap-24 w-2/3">
+    <div class="flex flex-col gap-4 font-cormorand">
+      <h1 class="2xl:text-9xl uppercase font-medium leading-30">
+        Lucca Romaniello
+      </h1>
+      <h2 class="2xl:text-2xl uppercase font-satoshi leading-snug font-light">
+        Full Stack Engineer with product design background
+      </h2>
     </div>
-    <div>
-      <p>some other content</p>
+    <div
+      class="flex flex-col gap-2 leading-relaxed description 2xl:text-xl font-light pr-24"
+    >
+      <p>
+        Blending engineering expertise and design sensibility across startups
+        and global teams for 6+ years.
+      </p>
+      <p>
+        Based in Brazil, working globally. Open to full-time and freelance
+        opportunities.
+      </p>
+      <video
+        autoplay
+        muted
+        width="320"
+        height="240"
+        class="absolute top-0 left-0 w-full h-full brightness-20 grayscale"
+      >
+        <source src="../assets/placeholder-bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
+  </div>
+  <div>
+    <p>some other content</p>
   </div>
 </div>
 

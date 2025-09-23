@@ -7,19 +7,20 @@ import {
   PROJECT_DESIGN_LIVE_URL,
 } from "@constants";
 import designArchiveImage from "@assets/overview-v0-portfolio.png";
+import topImage from "@assets/placeholder-top.png";
 ---
 
 <div id="projects" class="flex flex-col gap-12 items-center">
   <SectionHeading title="Projects" />
-  <div class="flex flex-col gap-8 md:gap-24 px-24">
+  <div class="flex flex-col gap-8 md:gap-40 px-32">
     <ProjectCard
       title="The Odin Project"
       description="A collection of 27 challenges created during The Odin Project, a full‑stack web‑development curriculum."
       website={{ href: PROJECT_ODIN_LIVE_URL }}
       repository={PROJECT_ODIN_REPO_URL}
       image={{
-        src: designArchiveImage,
-        alt: "An overview of the first version of Lucca's portfolio.",
+        src: topImage,
+        alt: "An overview of The Odin Project's website.",
       }}
     />
     <ProjectCard
