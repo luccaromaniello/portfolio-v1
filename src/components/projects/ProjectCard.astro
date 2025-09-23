@@ -14,29 +14,41 @@ interface Props {
     src: ImageMetadata;
     alt: string;
   };
+  even?: boolean;
 }
 
-const { title, description, website, repository, image } = Astro.props;
+const {
+  title,
+  description,
+  website,
+  repository,
+  image,
+  even = false,
+} = Astro.props;
 ---
 
-<div>
-  <div class="py-3">
-    <h3 class="text-xl md:text-4xl text-center md:text-start uppercase">
+<div class={`flex flex-col ${even ? "md:flex-row-reverse" : "md:flex-row"}`}>
+  <div class="flex flex-col justify-center">
+    <h3
+      class="text-xl md:text-6xl text-center md:text-start uppercase font-bold text-white"
+    >
       {title}
     </h3>
+    <p class="py-2 md:text-xl text-content-secondary">
+      {description}
+    </p>
   </div>
-  <p class="py-2 md:text-2xl text-content-secondary">
-    {description}
-  </p>
-  {image && <Image src={image.src} alt={image.alt} />}
-  <div class="flex
-    flex-col
-    md:flex-row">
-    <ProjectLink
-      label="Go to project"
-      href={website.href}
-      external={website.external}
-    />
-    {repository && <ProjectLink label="View repository" href={repository} />}
+  <div>
+    {image && <Image src={image.src} alt={image.alt} />}
+    <div class="flex
+      flex-col
+      md:flex-row">
+      <ProjectLink
+        label="Go to project"
+        href={website.href}
+        external={website.external}
+      />
+      {repository && <ProjectLink label="View repository" href={repository} />}
+    </div>
   </div>
 </div>
