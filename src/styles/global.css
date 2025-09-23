@@ -1,3 +1,34 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
+:root {
+  --text-secondary: hsl(0, 0%, 43.53%);
+}
+
+@font-face {
+  font-family: Satoshi;
+  font-display: optional;
+  src: url("fonts/Satoshi-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-display: optional;
+  src: url("fonts/PlayfairDisplay-Variable.woff") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display Italic";
+  font-display: optional;
+  src: url("fonts/PlayfairDisplay-Italic-Variable.woff2") format("woff2");
+}
+
+@theme {
+  --font-playfair: "Playfair Display", sans;
+  --font-playfair-italic: "Playfair Display Italic", sans;
+  --font-satoshi: "Satoshi", sans-serif;
+  --color-content-secondary: var(--text-secondary);
+}
+
+body {
+  font-family: Satoshi, sans-serif;
+}

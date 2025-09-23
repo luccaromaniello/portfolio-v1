@@ -19,15 +19,19 @@ interface Props {
 const { title, description, website, repository, image } = Astro.props;
 ---
 
-<div class="border-2">
+<div>
   <div class="py-3">
-    <h3 class="text-xl text-center">{title}</h3>
+    <h3 class="text-xl md:text-4xl text-center md:text-start uppercase">
+      {title}
+    </h3>
   </div>
-  <p class="px-3 py-2">
+  <p class="py-2 md:text-2xl text-content-secondary">
     {description}
   </p>
   {image && <Image src={image.src} alt={image.alt} />}
-  <div class="flex flex-col md:flex-row">
+  <div class="flex
+    flex-col
+    md:flex-row">
     <ProjectLink
       label="Go to project"
       href={website.href}
