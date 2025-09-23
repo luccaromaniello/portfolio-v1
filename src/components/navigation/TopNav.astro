@@ -2,15 +2,16 @@
 import { LINKEDIN_URL } from "@constants";
 import NavItem from "./NavItem.astro";
 ---
+
 <header>
-  <nav class="flex flex-row w-full h-20 justify-between items-center z-10 fixed bg-transparent px-8 text-white">
+  <nav
+    class="flex flex-row w-full h-20 justify-between items-center z-10 fixed bg-transparent px-8 text-white"
+  >
     <div class="font-playfair xl:text-xl">
       <a href="/">Lucca Romaniello</a>
     </div>
     <div class="flex flex-row gap-6">
-      <NavItem href="/">Work</HeaderLink>
-      <NavItem externalLink href={LINKEDIN_URL}>Resumé</HeaderLink>
-      <NavItem href="/">Contact</HeaderLink>
+      <NavItem href="/">Contact</NavItem>
     </div>
   </nav>
 </header>
