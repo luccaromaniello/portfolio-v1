@@ -30,15 +30,17 @@ const {
 <div
   class={`flex flex-col ${even ? "md:flex-row-reverse" : "md:flex-row"} gap-56`}
 >
-  <div class="flex flex-col gap-4 justify-center w-1/2">
-    <h3
-      class="text-xl md:text-6xl text-center md:text-start uppercase font-bold text-white"
-    >
-      {title}
-    </h3>
-    <p class="py-2 md:text-xl font-light text-content-secondary">
-      {description}
-    </p>
+  <div class="flex flex-col gap-6 justify-center w-1/2">
+    <div class="flex flex-col gap-2">
+      <h3
+        class="text-xl md:text-6xl text-center md:text-start uppercase font-bold text-white"
+      >
+        {title}
+      </h3>
+      <p class="py-2 md:text-xl font-light text-content-secondary">
+        {description}
+      </p>
+    </div>
     <div class="flex flex-col md:flex-row gap-6">
       <ProjectLink label="View project" href={website.href} />
       {repository && <ProjectLink label="View repository" href={repository} />}
