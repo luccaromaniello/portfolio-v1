@@ -30,12 +30,25 @@
   src: url("fonts/PlayfairDisplay-Italic-Variable.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Playfair Display Italic";
+  font-display: optional;
+  src: url("fonts/PlayfairDisplay-Italic-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Caveat";
+  font-display: optional;
+  src: url("fonts/Caveat-Variable.woff2") format("woff2");
+}
+
 @theme {
   --font-playfair: "Playfair Display", sans;
   --font-playfair-italic: "Playfair Display Italic", sans;
   --font-cormorand: "Cormorand Garamond", sans;
   --font-cormorand-italic: "Cormorand Garamond Italic", sans;
   --font-satoshi: "Satoshi", sans-serif;
+  --font-caveat: "Caveat", sans-serif;
   --background: var(--neutral-primary);
   --color-content-secondary: var(--neutral-secondary);
   --color-primary: var(--primary);
