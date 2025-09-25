@@ -13,27 +13,9 @@
 }
 
 @font-face {
-  font-family: "Cormorant Garamond Italic";
-  font-display: optional;
-  src: url("fonts/CormorantGaramond-Italic-Variable.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "Playfair Display";
   font-display: optional;
   src: url("fonts/PlayfairDisplay-Variable.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Playfair Display Italic";
-  font-display: optional;
-  src: url("fonts/PlayfairDisplay-Italic-Variable.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Playfair Display Italic";
-  font-display: optional;
-  src: url("fonts/PlayfairDisplay-Italic-Variable.woff2") format("woff2");
 }
 
 @font-face {
@@ -44,9 +26,7 @@
 
 @theme {
   --font-playfair: "Playfair Display", sans;
-  --font-playfair-italic: "Playfair Display Italic", sans;
   --font-cormorand: "Cormorand Garamond", sans;
-  --font-cormorand-italic: "Cormorand Garamond Italic", sans;
   --font-satoshi: "Satoshi", sans-serif;
   --font-caveat: "Caveat", sans-serif;
   --background: var(--neutral-primary);
