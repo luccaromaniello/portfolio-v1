@@ -1,5 +1,5 @@
 ---
-import ProjectLink from "@components/projects/ProjectLink.astro";
+import ButtonLink from "@components/ui/ButtonLink.astro";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -45,8 +45,8 @@ const {
     <div
       class="flex flex-col md:flex-row gap-6 justify-center lg:justify-start"
     >
-      <ProjectLink label="View project" href={website.href} />
-      {repository && <ProjectLink label="View repository" href={repository} />}
+      <ButtonLink label="View project" href={website.href} />
+      {repository && <ButtonLink label="View repository" href={repository} />}
     </div>
   </div>
   <div class="hidden lg:block lg:w-2/5 2xl:w-1/2 h-full">
