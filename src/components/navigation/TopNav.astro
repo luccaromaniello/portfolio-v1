@@ -1,28 +1,17 @@
 ---
-import { LINKEDIN_URL } from "@constants";
-import NavItem from "./NavItem.astro";
+import { MAIL_URL } from "@constants";
+import ButtonLink from "@components/ui/ButtonLink.astro";
 ---
 
 <header>
   <nav
-    class="flex flex-row w-full h-20 justify-between items-center z-10 fixed bg-transparent px-8 text-white"
+    class="flex flex-row w-full h-24 justify-between items-center z-10 fixed bg-transparent px-8 text-white"
   >
     <div class="font-cormorand xl:text-xl">
       <a href="/">Lucca Romaniello</a>
     </div>
     <div class="flex flex-row gap-6">
-      <NavItem href="/">Contact</NavItem>
+      <ButtonLink label="Contact" href={MAIL_URL} />
     </div>
   </nav>
 </header>
-<style>
-  header {
-    /* margin: 0;
-    padding: 0 1em;
-    background: transparent;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    height: var(--TOP_NAV_HEIGHT); */
-  }
-</style>
