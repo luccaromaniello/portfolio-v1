@@ -7,7 +7,9 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@constants": ["src/consts"]
+      "@constants": ["src/consts"],
+      "@data/*": ["src/data/*"],
+      "@typeDefs/*": ["src/types/*"]
     },
     "strictNullChecks": true,
     "jsx": "react-jsx",
