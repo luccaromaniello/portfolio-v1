@@ -14,10 +14,10 @@ const { experience } = Astro.props;
   class={`flex flex-col sm:flex-row w-full justify-between py-8 sm:py-4 md:px-42 gap-4 sm:gap-12`}
 >
   <div class="flex flex-col sm:flex-row gap-28">
-    <div class="flex flex-col sm:basis-64 shrink-0 gap-1 uppercase">
+    <div class="flex flex-col sm:basis-96 shrink-0 gap-1 uppercase">
       <p class="md:text-3xl font-light">{experience.location}</p>
       <p class="text-content-secondary md:text-lg">
-        {experience.startDate} -{" "}
+        {experience.startDate} - {" "}
         {
           experience.current ? (
             <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
@@ -29,20 +29,27 @@ const { experience } = Astro.props;
         }
       </p>
     </div>
-    <div class="flex flex-col grow gap-2">
+    <div class="flex flex-col gap-2">
       <p>
         <span class="font-medium text-lg md:text-3xl uppercase"
-          >{experience.role} —
+          >{experience.role}
         </span>
-        {
-          experience.companies?.map((company, i) => (
-            <>
-              <TextLink href={company.website ?? ""} label={company.name} />
-              {i !== experience.companies.length - 1 && ", "}
-            </>
-          ))
-        }
       </p>
+      <div>
+        {
+          experience.companies
+            ?.map((company, i) => (
+              <TextLink
+                href={company.website ?? ""}
+                label={company.name.trim()}
+              />
+            ))
+            .reduce(
+              (acc, curr, idx) => (idx === 0 ? [curr] : [...acc, ", ", curr]),
+              [],
+            )
+        }
+      </div>
       <p class="text-lg font-light text-content-secondary text-pretty">
         {experience.description}
       </p>
