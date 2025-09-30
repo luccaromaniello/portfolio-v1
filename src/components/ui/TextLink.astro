@@ -12,9 +12,7 @@ const { label, href } = Astro.props;
   aria-label={label}
   target="_blank"
   rel="noopener noreferrer"
-  class="inline-block w-full md:w-auto
-    text-sm md:text-lg text-center text-primary tracking-wide
-    hover:bg-white hover:text-black cursor-pointer"
+  class="inline-block text-sm md:text-lg text-primary tracking-wide hover:bg-white hover:text-black"
 >
-  {label}
+  {label.trim()}
 </a>
