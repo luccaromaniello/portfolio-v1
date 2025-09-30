@@ -1,4 +1,6 @@
 ---
+import Chip from "@components/ui/Chip.astro";
+import TextLink from "@components/ui/TextLink.astro";
 import { type ExperienceItem } from "@typeDefs/experience";
 
 interface Props {
@@ -6,50 +8,49 @@ interface Props {
 }
 
 const { experience } = Astro.props;
-
-// const chips = experience.technologies?.map((technology, i) => (
-//   <Chip key={i} text={technology} />
-// ));
-
-// const workCompanies = experience.companies?.map((company, i) => (
-//   <span>
-//     <a
-//       href={company.website}
-//       rel="noopener noreferrer"
-//       target="_blank"
-//       class="text-base font-medium text-primary-main hover:text-content-tertiary"
-//     >
-//       {company.name}
-//     </a>
-//     {i !== experience.companies.length - 1 && ", "}
-//   </span>
-// ));
 ---
 
 <div
-  class={`flex flex-col sm:flex-row w-full justify-between py-8 sm:py-4 gap-4 sm:gap-12 ${!experience.current ? "border-t" : ""}`}
+  class={`flex flex-col sm:flex-row w-full justify-between py-8 sm:py-4 md:px-48 gap-4 sm:gap-12`}
 >
-  <div class="flex flex-col sm:basis-48 shrink-0 gap-1">
-    <p class="">{experience.location}</p>
-    <p class="text-content-secondary">
-      {experience.startDate} -{" "}
-      {
-        experience.current ? (
-          <span class="text-primary-main font-medium">now</span>
-        ) : (
-          <span>{experience.endDate}</span>
-        )
-      }
-    </p>
-  </div>
-  <div class="flex flex-col grow gap-2">
-    <p>
-      <span class="font-medium">{experience.role}</span> —{" "}
-      <!-- {workCompanies} -->
-    </p>
-    <p class="text-content-secondary">{experience.description}</p>
-    <div class="flex flex-row flex-wrap items-start gap-2 py-2">
-      <!-- {experience.chips} -->
+  <div class="flex flex-col sm:flex-row gap-16">
+    <div class="flex flex-col sm:basis-56 shrink-0 gap-1 uppercase">
+      <p class="">{experience.location}</p>
+      <p class="text-content-secondary">
+        {experience.startDate} -{" "}
+        {
+          experience.current ? (
+            <span class="text-primary font-medium">now</span>
+          ) : (
+            <span>{experience.endDate}</span>
+          )
+        }
+      </p>
+    </div>
+    <div class="flex flex-col grow gap-2">
+      <p>
+        <span class="font-medium text-lg md:text-3xl uppercase"
+          >{experience.role}</span
+        > — {" "}
+        {
+          experience.companies?.map((company, i) => (
+            <>
+              <TextLink href={company.website ?? ""} label={company.name} />
+              {i !== experience.companies.length - 1 && ", "}
+            </>
+          ))
+        }
+      </p>
+      <p class="text-lg font-light text-content-secondary">
+        {experience.description}
+      </p>
+      <div class="flex flex-row flex-wrap items-start gap-3 py-2">
+        {
+          experience.technologies?.map((technology, i) => (
+            <Chip label={technology} />
+          ))
+        }
+      </div>
     </div>
   </div>
 </div>
