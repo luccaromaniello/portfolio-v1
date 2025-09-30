@@ -1,7 +1,4 @@
-export interface Company {
-  name: string;
-  website?: string;
-}
+import type { Company } from "@typeDefs/company";
 
 export interface ExperienceItem {
   role: string;
