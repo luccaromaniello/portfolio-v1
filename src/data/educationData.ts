@@ -1,26 +1,39 @@
 export const educationHistory = [
   {
+    companies: [],
     description:
       "Self-taught: always learning from every book, article, co-worker, and life experience",
+    highlight: false,
+    startDate: "Always",
     location: "Anywhere",
-    always: true,
+    current: true,
   },
   {
-    school: "Pontifícia Católica Universidade de Minas Gerais",
+    companies: [
+      {
+        name: "Pontifícia Católica Universidade de Minas Gerais",
+        website: "https://www.linkedin.com/school/pucminas/",
+      },
+    ],
     description: "Full Stack Development, Postgraduate degree (Lato sensu)",
-    website: "https://www.linkedin.com/school/pucminas/",
+    highlight: true,
     startDate: "2024",
     endDate: "2025",
     location: "Remote",
-    always: false,
+    current: false,
   },
   {
-    school: "Pontifícia Católica Universidade de Minas Gerais",
+    companies: [
+      {
+        name: "Pontifícia Católica Universidade de Minas Gerais",
+        website: "https://www.linkedin.com/school/pucminas/",
+      },
+    ],
     description: "Software Engineering, Bachelor’s degree",
-    website: "https://www.linkedin.com/school/pucminas/",
+    highlight: true,
     startDate: "2018",
     endDate: "2022",
     location: "Belo Horizonte, Brazil",
-    always: false,
+    current: false,
   },
 ];
