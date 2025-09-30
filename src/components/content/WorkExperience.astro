@@ -20,7 +20,9 @@ const { experience } = Astro.props;
         {experience.startDate} -{" "}
         {
           experience.current ? (
-            <span class="text-primary font-medium">now</span>
+            <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
+              now
+            </span>
           ) : (
             <span>{experience.endDate}</span>
           )
@@ -30,8 +32,8 @@ const { experience } = Astro.props;
     <div class="flex flex-col grow gap-2">
       <p>
         <span class="font-medium text-lg md:text-3xl uppercase"
-          >{experience.role}</span
-        > — {" "}
+          >{experience.role} —
+        </span>
         {
           experience.companies?.map((company, i) => (
             <>
