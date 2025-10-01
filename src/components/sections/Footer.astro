@@ -42,7 +42,7 @@ const timeMachineLinks = [
 ---
 
 <footer
-  class="flex flex-row gap-4 md:gap-8 lg:gap-24 md:pb-24 md:pt-48 px-8 lg:px-24 w-full text-content-secondary items-start justify-around font-light"
+  class="flex flex-col md:flex-row gap-12 md:gap-8 lg:gap-24 pb-12 md:pb-24 md:pt-48 px-8 lg:px-24 w-full text-content-secondary items-start justify-around font-light"
 >
   <div class="flex flex-col gap-10">
     <Image
@@ -59,13 +59,16 @@ const timeMachineLinks = [
         <TextLink link={{ label: MAIL_URL, url: MAIL_URL }} size="large" />
       </div>
     </div>
-    <div class="text-sm text-content-secondary">
+    <div class="hidden md:block text-sm text-content-secondary">
       <p>&copy 2025 Designed and coded by Lucca Romaniello.</p>
     </div>
   </div>
-  <div class="flex flex-row gap-24">
+  <div class="flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-24">
     <FooterLink title="Work" links={workLinks} />
     <FooterLink title="Contact" links={contactLinks} />
     <FooterLink title="Time Machine" links={timeMachineLinks} />
+  </div>
+  <div class="md:hidden text-sm text-content-secondary">
+    <p>&copy 2025 Designed and coded by Lucca Romaniello.</p>
   </div>
 </footer>
