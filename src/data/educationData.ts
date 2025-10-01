@@ -10,7 +10,7 @@ export const educationHistory = [
     startDate: "2025",
     location: "Remote",
     current: true,
-    technologies: ["Vue.js", "Kotlin", "Flutter", "ASP.NET"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js", "SQL"],
   },
   {
     companies: [
@@ -25,7 +25,13 @@ export const educationHistory = [
     endDate: "2025",
     location: "Remote",
     current: false,
-    technologies: ["Vue.js", "Kotlin", "Flutter", "ASP.NET"],
+    technologies: [
+      "Entrepreneurship",
+      "Decision making",
+      "Networking",
+      "MVP Development",
+      "Startup Fundraising",
+    ],
   },
   {
     companies: [
@@ -39,7 +45,18 @@ export const educationHistory = [
     endDate: "2025",
     location: "Remote",
     current: false,
-    technologies: ["Vue.js", "Kotlin", "Flutter", "ASP.NET"],
+    technologies: [
+      "React",
+      "Node.js",
+      "Python",
+      "SQL",
+      "MongoDB",
+      "Flutter",
+      "DevOps",
+      "CI/CD",
+      "Project Management",
+      "Software Testing",
+    ],
   },
   {
     companies: [
@@ -53,6 +70,15 @@ export const educationHistory = [
     endDate: "2022",
     location: "Belo Horizonte, Brazil",
     current: false,
-    technologies: ["Vue.js", "Kotlin", "Flutter", "ASP.NET"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Java",
+      "Algorithms and Data Structures",
+      "Operational Systems",
+      "Software Architecture",
+      "Statistics",
+    ],
   },
 ];
