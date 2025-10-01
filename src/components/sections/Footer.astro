@@ -1,0 +1,55 @@
+---
+import TextLink from "@components/ui/TextLink.astro";
+import { PROJECT_ODIN_LIVE_URL, MAIL_URL } from "@constants";
+import luccaIcon from "@assets/icons/lucca.png";
+import { Image } from "astro:assets";
+---
+
+<footer
+  class="flex flex-col gap-4 lg:gap- px-8 py-12 md:pb-16 md:pt-56 w-full text-white items-center justify-center font-light"
+>
+  <div
+    class="flex flex-row gap-4 md:gap-8 lg:gap-24 px-2 lg:px-24 w-full text-content-secondary items-center justify-around"
+  >
+    <div class="flex flex-col gap-8">
+      <Image
+        src={luccaIcon}
+        alt="Lucca's illustration"
+        class="w-16 h-16 rounded-full shadow-[1px_1px_0_0_#AE1E5F]"
+      />
+      <div class="flex flex-col gap-3">
+        <p class="text-md md:text-xl">
+          If you have something in mind, feel free to reach me out.
+        </p>
+        <div class="self-start">
+          <TextLink
+            label="contact@luccaromaniello.com"
+            href={MAIL_URL}
+            size="large"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row gap-6">
+      <div class="flex flex-col gap-3">
+        <p class="text-md font-medium">Work</p>
+        <ul>
+          <li>
+            <TextLink label="The Odin Project" href={PROJECT_ODIN_LIVE_URL} />
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-3">
+        <p class="text-md font-medium">Contact</p>
+        <ul>
+          <li>
+            <TextLink label="The Odin Project" href={PROJECT_ODIN_LIVE_URL} />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-md text-center text-content-secondary">
+    <p>&copy 2025 Designed and coded by Lucca Romaniello.</p>
+  </div>
+</footer>

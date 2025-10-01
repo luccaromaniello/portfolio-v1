@@ -2,9 +2,10 @@
 interface Props {
   label: string;
   href: string;
+  size?: "default" | "large";
 }
 
-const { label, href } = Astro.props;
+const { label, href, size = "default" } = Astro.props;
 ---
 
 <a
@@ -12,10 +13,10 @@ const { label, href } = Astro.props;
   aria-label={label}
   target="_blank"
   rel="noopener noreferrer"
-  class="inline-block text-md md:text-lg text-primary tracking-wide
+  class={`${size === "default" ? "text-md md:text-lg" : "text-lg md:text-3xl"} inline-block text-primary tracking-wide
   border-dashed border-primary border-b
   relative hover:text-neutral-primary transition-colors duration-500 ease-in-out
-  after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-0.5 after:bg-primary after:w-0 after:block after:transition-[width] after:duration-500 after:ease-in-out hover:after:w-full"
+  after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-0.5 after:bg-primary after:w-0 after:block after:transition-[width] after:duration-500 after:ease-in-out hover:after:w-full`}
 >
   {label.trim()}
 </a>
