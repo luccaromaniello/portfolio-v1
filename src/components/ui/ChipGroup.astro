@@ -1,0 +1,13 @@
+---
+import Chip from "@components/ui/Chip.astro";
+
+interface Props {
+  chips: string[];
+}
+
+const { chips } = Astro.props;
+---
+
+<div class="flex flex-row flex-wrap items-start gap-3 py-2">
+  {chips.map((chip) => <Chip label={chip} />)}
+</div>
