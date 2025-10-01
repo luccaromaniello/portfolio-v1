@@ -21,14 +21,23 @@ const { experience } = Astro.props;
         {experience.location}
       </p>
       <p class="text-content-secondary text-sm md:text-lg lg:text-lg">
-        {experience.startDate} - {" "}
+        {experience.startDate}
         {
           experience.current ? (
-            <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
-              now
-            </span>
+            <>
+              {" - "}
+              <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
+                now
+              </span>
+            </>
           ) : (
-            <span>{experience.endDate}</span>
+            experience.endDate &&
+            experience.endDate !== experience.startDate && (
+              <>
+                {" - "}
+                <span>{experience.endDate}</span>
+              </>
+            )
           )
         }
       </p>
