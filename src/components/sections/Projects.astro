@@ -1,11 +1,7 @@
 ---
 import Section from "@components/content/Section.astro";
 import ProjectCard from "@components/projects/ProjectCard.astro";
-import {
-  PROJECT_ODIN_LIVE_URL,
-  PROJECT_ODIN_REPO_URL,
-  PROJECT_DESIGN_LIVE_URL,
-} from "@constants";
+import { PROJECT_ODIN_LIVE_URL, PROJECT_ODIN_REPO_URL } from "@constants";
 import designArchiveImage from "@assets/overview-v0-portfolio.png";
 import topImage from "@assets/placeholder-top.png";
 ---
@@ -21,17 +17,4 @@ import topImage from "@assets/placeholder-top.png";
       alt: "An overview of The Odin Project's website.",
     }}
   />
-  <!-- TODO: update with new projects! design archive will be in the footer -->
-  <!-- <ProjectCard
-      title="Design Archive"
-      description=`The first version of this portfolio showcases my past design work.
-        Some items are password protected, but I’m happy to provide access upon
-        request.`
-      website={{ href: PROJECT_DESIGN_LIVE_URL, external: true }}
-      image={{
-        src: designArchiveImage,
-        alt: "An overview of the first version of Lucca's portfolio.",
-      }}
-      even
-    /> -->
 </Section>
