@@ -1,5 +1,5 @@
 ---
-import SectionHeading from "@components/typography/SectionHeading.astro";
+import Section from "@components/content/Section.astro";
 import ProjectCard from "@components/projects/ProjectCard.astro";
 import {
   PROJECT_ODIN_LIVE_URL,
@@ -10,21 +10,19 @@ import designArchiveImage from "@assets/overview-v0-portfolio.png";
 import topImage from "@assets/placeholder-top.png";
 ---
 
-<div id="projects" class="flex flex-col gap-12 items-center py-12 md:py-40">
-  <SectionHeading title="Things I've built" />
-  <div class="flex flex-col gap-20 md:gap-30 lg:gap-40 px-2 lg:px-32">
-    <ProjectCard
-      title="The Odin Project"
-      description="A collection of 27 challenges created during The Odin Project, a full‑stack web‑development curriculum."
-      website={{ href: PROJECT_ODIN_LIVE_URL }}
-      repository={PROJECT_ODIN_REPO_URL}
-      image={{
-        src: topImage,
-        alt: "An overview of The Odin Project's website.",
-      }}
-    />
-    <!-- TODO: update with new projects! design archive will be in the footer -->
-    <!-- <ProjectCard
+<Section heading="Selected work">
+  <ProjectCard
+    title="The Odin Project"
+    description="A collection of 27 challenges created during The Odin Project, a full‑stack web‑development curriculum."
+    website={{ href: PROJECT_ODIN_LIVE_URL }}
+    repository={PROJECT_ODIN_REPO_URL}
+    image={{
+      src: topImage,
+      alt: "An overview of The Odin Project's website.",
+    }}
+  />
+  <!-- TODO: update with new projects! design archive will be in the footer -->
+  <!-- <ProjectCard
       title="Design Archive"
       description=`The first version of this portfolio showcases my past design work.
         Some items are password protected, but I’m happy to provide access upon
@@ -36,5 +34,4 @@ import topImage from "@assets/placeholder-top.png";
       }}
       even
     /> -->
-  </div>
-</div>
+</Section>
