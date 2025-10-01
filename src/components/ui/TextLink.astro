@@ -2,10 +2,16 @@
 interface Props {
   label: string;
   href: string;
-  size?: "default" | "large";
+  size?: "small" | "medium" | "large";
 }
 
-const { label, href, size = "default" } = Astro.props;
+const { label, href, size = "medium" } = Astro.props;
+
+const buttonVariant = {
+  small: "text-sm md:text-base",
+  medium: "text-md md:text-lg",
+  large: "text-lg md:text-3xl",
+};
 ---
 
 <a
@@ -13,7 +19,7 @@ const { label, href, size = "default" } = Astro.props;
   aria-label={label}
   target="_blank"
   rel="noopener noreferrer"
-  class={`${size === "default" ? "text-md md:text-lg" : "text-lg md:text-3xl"} inline-block text-primary tracking-wide
+  class={`${buttonVariant[size]} inline-block text-primary tracking-wide
   border-dashed border-primary border-b
   relative hover:text-neutral-primary transition-colors duration-500 ease-in-out
   after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-0.5 after:bg-primary after:w-0 after:block after:transition-[width] after:duration-500 after:ease-in-out hover:after:w-full`}
