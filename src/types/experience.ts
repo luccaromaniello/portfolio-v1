@@ -7,6 +7,6 @@ export interface ExperienceItem {
   location: string;
   title: string;
   companies: Company[];
-  description: string;
+  description?: string;
   technologies: string[];
 }
