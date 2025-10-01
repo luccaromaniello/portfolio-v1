@@ -10,7 +10,7 @@ export const educationHistory = [
     startDate: "2025",
     location: "Remote",
     current: true,
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js", "SQL"],
+    technologies: ["React", "Node.js", "SQL", "JavaScript", "CSS", "HTML"],
   },
   {
     companies: [
@@ -71,9 +71,9 @@ export const educationHistory = [
     location: "Belo Horizonte, Brazil",
     current: false,
     technologies: [
-      "HTML",
-      "CSS",
       "JavaScript",
+      "CSS",
+      "HTML",
       "Java",
       "Algorithms and Data Structures",
       "Operational Systems",
