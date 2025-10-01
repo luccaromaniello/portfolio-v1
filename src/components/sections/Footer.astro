@@ -1,8 +1,44 @@
 ---
 import TextLink from "@components/ui/TextLink.astro";
-import { PROJECT_ODIN_LIVE_URL, MAIL_URL } from "@constants";
+import FooterLink from "@components/content/FooterLink.astro";
+import {
+  PROJECT_ODIN_LIVE_URL,
+  PROJECT_PORTFOLIO_V0_URL,
+  MAIL_URL,
+  LINKEDIN_URL,
+  GITHUB_URL,
+} from "@constants";
 import luccaIcon from "@assets/icons/lucca.png";
 import { Image } from "astro:assets";
+
+const workLinks = [
+  {
+    label: "The Odin Project",
+    url: PROJECT_ODIN_LIVE_URL,
+  },
+];
+
+const contactLinks = [
+  {
+    label: "Email",
+    url: MAIL_URL,
+  },
+  {
+    label: "GitHub",
+    url: GITHUB_URL,
+  },
+  {
+    label: "LinkedIn",
+    url: LINKEDIN_URL,
+  },
+];
+
+const timeMachineLinks = [
+  {
+    label: "Version 0",
+    url: PROJECT_PORTFOLIO_V0_URL,
+  },
+];
 ---
 
 <footer
@@ -22,6 +58,7 @@ import { Image } from "astro:assets";
           If you have something in mind, feel free to reach me out.
         </p>
         <div class="self-start">
+          <!-- TODO: Copy mail on click -->
           <TextLink
             label="contact@luccaromaniello.com"
             href={MAIL_URL}
@@ -30,26 +67,13 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </div>
-    <div class="flex flex-row gap-6">
-      <div class="flex flex-col gap-3">
-        <p class="text-md font-medium">Work</p>
-        <ul>
-          <li>
-            <TextLink label="The Odin Project" href={PROJECT_ODIN_LIVE_URL} />
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-3">
-        <p class="text-md font-medium">Contact</p>
-        <ul>
-          <li>
-            <TextLink label="The Odin Project" href={PROJECT_ODIN_LIVE_URL} />
-          </li>
-        </ul>
-      </div>
+    <div class="flex flex-row gap-24">
+      <FooterLink title="Work" links={workLinks} />
+      <FooterLink title="Contact" links={contactLinks} />
+      <FooterLink title="Time Machine" links={timeMachineLinks} />
     </div>
   </div>
-  <div class="text-md text-center text-content-secondary">
+  <div class="text-sm text-content-secondary">
     <p>&copy 2025 Designed and coded by Lucca Romaniello.</p>
   </div>
 </footer>

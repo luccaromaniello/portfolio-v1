@@ -1,0 +1,23 @@
+---
+import { type Link } from "@typeDefs/link";
+import TextLink from "@components/ui/TextLink.astro";
+
+interface Props {
+  title: string;
+  links: Link[];
+}
+const { title, links } = Astro.props;
+---
+
+<div class="flex flex-col gap-3">
+  <p class="text-md font-medium">{title}</p>
+  <ul class="flex flex-col gap-3">
+    {
+      links.map((link) => (
+        <li>
+          <TextLink label={link.label} href={link.url} />
+        </li>
+      ))
+    }
+  </ul>
+</div>
