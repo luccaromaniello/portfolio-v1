@@ -55,8 +55,7 @@ const { experience } = Astro.props;
             experience.companies
               ?.map((company, i) => (
                 <TextLink
-                  href={company.website ?? ""}
-                  label={company.name.trim()}
+                  link={{ label: company.name, url: company.website ?? "" }}
                 />
               ))
               .reduce(

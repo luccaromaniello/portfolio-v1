@@ -1,11 +1,12 @@
 ---
+import { type Link } from "@typeDefs/link";
+
 interface Props {
-  label: string;
-  href: string;
+  link: Link;
   size?: "small" | "medium" | "large";
 }
 
-const { label, href, size = "medium" } = Astro.props;
+const { link, size = "medium" } = Astro.props;
 
 const buttonVariant = {
   small: "text-sm md:text-base",
@@ -15,8 +16,8 @@ const buttonVariant = {
 ---
 
 <a
-  href={href}
-  aria-label={label}
+  href={link.url}
+  aria-label={link.label}
   target="_blank"
   rel="noopener noreferrer"
   class={`${buttonVariant[size]} inline-block text-primary tracking-wide
@@ -24,5 +25,5 @@ const buttonVariant = {
   relative hover:text-neutral-primary transition-colors duration-500 ease-in-out
   after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-0.5 after:bg-primary after:w-0 after:block after:transition-[width] after:duration-500 after:ease-in-out hover:after:w-full`}
 >
-  {label.trim()}
+  {link.label.trim()}
 </a>
