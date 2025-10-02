@@ -39,10 +39,12 @@ const timeMachineLinks = [
     url: PROJECT_PORTFOLIO_V0_URL,
   },
 ];
+
+const { class: className = "" } = Astro.props;
 ---
 
 <footer
-  class="flex flex-col md:flex-row gap-12 md:gap-8 lg:gap-24 pb-12 md:pb-24 md:pt-48 px-8 lg:px-24 w-full text-content-secondary items-start justify-around font-light"
+  class={`flex flex-col md:flex-row gap-12 md:gap-8 lg:gap-24 pb-12 md:pb-24 md:pt-48 w-full text-content-secondary justify-between 2xl:pr-96 items-start font-light ${className}`}
 >
   <div class="flex flex-col gap-10">
     <Image

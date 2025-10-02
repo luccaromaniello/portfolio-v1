@@ -8,6 +8,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import SideLinks from "@components/navigation/SideLinks.astro";
 import Experience from "@components/sections/Experience.astro";
 import Education from "@components/sections/Education.astro";
+
+const layoutPadding = "px-8 md:px-20 lg:px-36 2xl:px-56";
 ---
 
 <!doctype html>
@@ -19,11 +21,11 @@ import Education from "@components/sections/Education.astro";
     <TopNav />
     <SideLinks />
     <Hero />
-    <main class="px-8">
+    <main class={layoutPadding}>
       <Projects />
       <Experience />
       <Education />
     </main>
-    <Footer />
+    <Footer class={layoutPadding} />
   </body>
 </html>
