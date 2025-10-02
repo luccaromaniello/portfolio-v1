@@ -1,0 +1,26 @@
+---
+import { SOCIAL_ICONS } from "@constants";
+
+interface Props {
+  icon: keyof typeof SOCIAL_ICONS;
+  size?: "medium" | "large";
+}
+
+const buttonVariant = {
+  medium: "w-6 h-6",
+  large: "w-8 h-8",
+};
+
+const { icon, size = "medium" } = Astro.props;
+const IconComponent = SOCIAL_ICONS[icon].icon;
+---
+
+<a
+  href={SOCIAL_ICONS[icon].link.url}
+  aria-label={SOCIAL_ICONS[icon].link.label}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`text-white hover:text-primary ${buttonVariant[size]}`}
+>
+  <IconComponent />
+</a>
