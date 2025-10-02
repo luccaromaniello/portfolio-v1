@@ -44,7 +44,7 @@ const { class: className = "" } = Astro.props;
 ---
 
 <footer
-  class={`flex flex-col md:flex-row gap-12 md:gap-8 lg:gap-24 pb-12 md:pb-24 md:pt-48 w-full text-content-secondary justify-between 2xl:pr-96 items-start font-light ${className}`}
+  class={`flex flex-col md:flex-row gap-12 md:gap-12 lg:gap-20 pb-12 md:pb-24 md:pt-48 w-full text-content-secondary justify-between 2xl:pr-80 items-start font-light ${className}`}
 >
   <div class="flex flex-col gap-10">
     <Image
@@ -65,10 +65,14 @@ const { class: className = "" } = Astro.props;
       <p>&copy 2025 Designed and coded by Lucca Romaniello.</p>
     </div>
   </div>
-  <div class="flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-24">
+  <div
+    class="flex flex-row w-full xl:w-auto justify-between md:justify-start gap-8 md:gap-12 xl:gap-24"
+  >
     <FooterLink title="Work" links={workLinks} />
-    <FooterLink title="Contact" links={contactLinks} />
-    <FooterLink title="Time Machine" links={timeMachineLinks} />
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-24">
+      <FooterLink title="Contact" links={contactLinks} />
+      <FooterLink title="Time Machine" links={timeMachineLinks} />
+    </div>
   </div>
   <div class="md:hidden text-sm text-content-secondary">
     <p>&copy 2025 Designed and coded by Lucca Romaniello.</p>
