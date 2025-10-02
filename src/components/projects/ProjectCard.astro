@@ -28,10 +28,10 @@ const {
 ---
 
 <div
-  class={`flex flex-col ${even ? "md:flex-row-reverse" : "md:flex-row"} md:gap-24 2xl:gap-56`}
+  class={`flex flex-col ${even ? "xl:flex-row-reverse" : "xl:flex-row"} md:gap-24 2xl:gap-56`}
 >
-  <div class="flex flex-col gap-8 justify-center lg:w-3/5 2xl:w-1/2">
-    <div class="flex flex-col gap-4 sm:text-center lg:text-start">
+  <div class="flex flex-col gap-8 justify-center xl:w-3/5 2xl:w-1/2">
+    <div class="flex flex-col gap-4 sm:text-center xl:text-start">
       <h3 class="text-3xl md:text-6xl uppercase font-bold text-white">
         {title}
       </h3>
@@ -39,17 +39,17 @@ const {
         {description}
       </p>
     </div>
-    <div class="w-full h-full lg:hidden">
+    <div class="w-full h-full xl:hidden">
       {image && <Image src={image.src} alt={image.alt} />}
     </div>
     <div
-      class="flex flex-col md:flex-row gap-6 justify-center lg:justify-start"
+      class="flex flex-col md:flex-row gap-6 justify-center xl:justify-start"
     >
       <ButtonLink label="View project" href={website.href} />
       {repository && <ButtonLink label="View repository" href={repository} />}
     </div>
   </div>
-  <div class="hidden lg:block lg:w-2/5 2xl:w-1/2 h-full">
+  <div class="hidden xl:block lg:w-2/5 2xl:w-1/2 h-full">
     {image && <Image src={image.src} alt={image.alt} />}
   </div>
 </div>
