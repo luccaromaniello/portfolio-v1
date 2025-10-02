@@ -10,9 +10,7 @@ const { heading } = Astro.props;
 
 <section class="flex flex-col gap-4 items-center py-12 md:py-20">
   <SectionHeading title={heading} />
-  <div
-    class="flex flex-col gap-4 md:gap-8 lg:gap-12 px-2 lg:px-24 text-white w-full"
-  >
+  <div class="flex flex-col gap-4 md:gap-8 lg:gap-12 text-white w-full">
     <slot />
   </div>
 </section>
