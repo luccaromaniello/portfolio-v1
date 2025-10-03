@@ -1,44 +1,23 @@
-# Astro Starter Kit: Blog
+<div align="center">
+  <img alt="Logo" src="https://github.com/luccaromaniello/portfolio-v1/blob/c26a72061b26d68cff1a332616a41ad4b626f742/src/assets/icons/lucca.png" width="100" />
+</div>
+<h1 align="center">
+  <a href="https://www.luccaromaniello.com" target="_blank">luccaromaniello.com</a> - v1
+</h1>
+<p align="center">
+  The second version of <a href="https://www.luccaromaniello.com/" target="_blank">www.luccaromaniello.com</a> built with <a href="https://astro.build/" target="_blank">Astro</a>.
+</p>
+<p align="center">
+  Previous versions:
+  <a href="https://v0.luccaromaniello.com/" target="_blank">v0</a>
+</p>
 
-```sh
-bun create astro@latest -- --template blog
-```
+## 🍴 Forking this repository
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Feel free to fork this repository and customize it to your liking.
 
-Features:
+The only thing I ask is that you give me credit for the original design and code by referencing it directly on your website or, at the very least, in your README file. And of course, please delete any files that are not relevant to your project.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -53,10 +32,6 @@ All commands are run from the root of the project, from a terminal:
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Credits
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+A huge shoutout to [Brittany Chieng](https://github.com/bchiang7) for exemplifying code versioning (separating portfolio versions and documenting them). I’ve followed the same approach as her, and I hope you like it. Take a look at her portfolio at [www.brittanychieng.com](https://www.brittanychieng.com).
