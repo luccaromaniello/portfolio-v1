@@ -28,19 +28,23 @@ const {
 ---
 
 <div
-  class={`flex flex-col ${even ? "xl:flex-row-reverse" : "xl:flex-row"} md:gap-24 2xl:gap-56`}
+  class={`flex flex-col ${even ? "xl:flex-row-reverse" : "xl:flex-row"} md:gap-24 2xl:gap-0`}
 >
-  <div class="flex flex-col gap-8 justify-center xl:w-3/5 2xl:w-1/2">
-    <div class="flex flex-col gap-4 sm:text-center xl:text-start">
+  <div class="flex flex-col gap-8 justify-center xl:w-2/5 2xl:w-1/2">
+    <div class="flex flex-col gap-4 text-center xl:text-start">
       <h3 class="text-3xl md:text-6xl uppercase font-bold text-white">
         {title}
       </h3>
-      <p class="text-lg md:text-xl font-light text-content-secondary">
+      <p
+        class="text-lg md:text-xl font-light text-content-secondary text-balance"
+      >
         {description}
       </p>
     </div>
-    <div class="w-full h-full xl:hidden">
-      {image && <Image src={image.src} alt={image.alt} />}
+    <div class="w-full h-full xl:hidden overflow-hidden rounded-xl">
+      <div>
+        {image && <Image src={image.src} alt={image.alt} />}
+      </div>
     </div>
     <div
       class="flex flex-col md:flex-row gap-6 justify-center xl:justify-start"
@@ -49,7 +53,11 @@ const {
       {repository && <ButtonLink label="View repository" href={repository} />}
     </div>
   </div>
-  <div class="hidden xl:block lg:w-2/5 2xl:w-1/2 h-full">
-    {image && <Image src={image.src} alt={image.alt} />}
+  <div
+    class="hidden xl:w-3/5 2xl:w-1/2 h-full xl:block overflow-hidden rounded-xl group"
+  >
+    <div class="transition-transform duration-500 group-hover:scale-105">
+      {image && <Image src={image.src} alt={image.alt} />}
+    </div>
   </div>
 </div>
