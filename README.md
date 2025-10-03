@@ -5,7 +5,7 @@
   <a href="https://www.luccaromaniello.com" target="_blank">luccaromaniello.com</a> - v1
 </h1>
 <p align="center">
-  The second version of <a href="https://www.luccaromaniello.com/" target="_blank">www.luccaromaniello.com</a> built with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://bun.com/" target="_blank">Bun</a>.
+  The second version of <a href="https://www.luccaromaniello.com/" target="_blank">luccaromaniello.com</a> built with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://bun.com/" target="_blank">Bun</a>.
 </p>
 <p align="center">
   Previous versions:
