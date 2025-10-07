@@ -20,7 +20,7 @@ export const odinProjects = [
     title: "Sign-up Form",
     type: SECTIONS.INTERMEDIATE_HTML_CSS,
     description:
-      "UI implementation of a sign-up form. Focus on HTML5 form validations and CSS Flexbox layout.",
+      "UI implementation challenge focused on HTML5 form validation and CSS Flexbox layout.",
     website: "https://luccaromaniello.com/theodinproject/sign-up-form/",
     repository: "https://github.com/luccaromaniello/top-sign-up-form/",
     image: {
