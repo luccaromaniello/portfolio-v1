@@ -2,9 +2,15 @@
 import ButtonLink from "@components/ui/ButtonLink.astro";
 import { MAIL_URL } from "@constants";
 import IconButton from "@components/ui/IconButton.astro";
+
+interface Props {
+  showHomeButton?: boolean;
+}
+
+const { showHomeButton = false } = Astro.props;
 ---
 
-<nav
+<!-- <nav
   aria-label="Contact and social media links"
   class="hidden xl:flex flex-row justify-between items-end fixed left-8 bottom-8 right-8 z-10"
 >
@@ -13,4 +19,25 @@ import IconButton from "@components/ui/IconButton.astro";
     <IconButton icon="linkedin" />
   </div>
   <ButtonLink label="Contact" href={MAIL_URL} />
+</nav> -->
+<nav
+  aria-label="Page navigation and social media links"
+  class="hidden xl:block fixed inset-0 pointer-events-none z-10"
+>
+  {
+    showHomeButton && (
+      <div class="absolute top-8 left-8 pointer-events-auto">
+        <ButtonLink label="Home" href="/" external={false} />
+      </div>
+    )
+  }
+
+  <div class="absolute bottom-8 left-8 flex flex-col gap-5 pointer-events-auto">
+    <IconButton icon="github" />
+    <IconButton icon="linkedin" />
+  </div>
+
+  <div class="absolute bottom-8 right-8 pointer-events-auto">
+    <ButtonLink label="Contact" href={MAIL_URL} />
+  </div>
 </nav>
