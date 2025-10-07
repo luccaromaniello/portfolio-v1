@@ -3,13 +3,10 @@ import Hero from "@components/Hero.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "@components/sections/Footer.astro";
 import Projects from "@components/sections/Projects.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { SITE_DESCRIPTION, SITE_TITLE, baseLayout } from "@constants";
 import SideLinks from "@components/navigation/SideLinks.astro";
 import Experience from "@components/sections/Experience.astro";
 import Education from "@components/sections/Education.astro";
-
-const layoutPadding =
-  "px-8 md:px-20 lg:px-28 xl:px-36 grid grid-cols-1 max-w-[1632px] mx-auto";
 ---
 
 <!doctype html>
@@ -20,11 +17,11 @@ const layoutPadding =
   <body class="font-satoshi">
     <SideLinks />
     <Hero />
-    <main class={layoutPadding}>
+    <main class={baseLayout}>
       <Projects />
       <Experience />
       <Education />
     </main>
-    <Footer class={layoutPadding} />
+    <Footer class={baseLayout} />
   </body>
 </html>
