@@ -7,6 +7,8 @@ import {
   PROJECT_ODIN_SITE_TITLE,
   baseLayout,
 } from "@constants";
+import { odinProjects } from "@data/odinProjects";
+import ProjectTile from "@components/theodinproject/ProjectTile.astro";
 ---
 
 <!doctype html>
@@ -19,7 +21,14 @@ import {
   </head>
   <body class="font-satoshi">
     <SideLinks />
-    <main class={baseLayout}></main>
+    <main class={baseLayout}>
+      <h1
+        class="text-3xl md:text-6xl uppercase font-bold text-white text-center"
+      >
+        The Odin Project
+      </h1>
+      {odinProjects.map((project) => <ProjectTile project={project} />)}
+    </main>
     <Footer class={baseLayout} />
   </body>
 </html>
