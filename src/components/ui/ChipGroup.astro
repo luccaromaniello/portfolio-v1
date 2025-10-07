@@ -8,6 +8,6 @@ interface Props {
 const { chips } = Astro.props;
 ---
 
-<div class="flex flex-row flex-wrap items-start gap-3 py-2">
+<div class="flex flex-row flex-wrap items-start gap-3 py-2 text-white">
   {chips.map((chip) => <Chip label={chip} />)}
 </div>
