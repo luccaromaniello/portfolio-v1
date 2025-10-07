@@ -1,15 +1,17 @@
-export const enum SECTIONS {
-  INTERMEDIATE_HTML_CSS = "Intermediate HTML and CSS",
-  JAVASCRIPT = "JavaScript",
-  ADVANCED_HTML_CSS = "Advanced HTML and CSS",
-  REACT = "React",
-  DATABASES = "Databases",
-  NODE = "NodeJS",
-}
+export const SECTIONS = {
+  NODE: "NodeJS",
+  DATABASES: "Databases",
+  REACT: "React",
+  ADVANCED_HTML_CSS: "Advanced HTML and CSS",
+  JAVASCRIPT: "JavaScript",
+  INTERMEDIATE_HTML_CSS: "Intermediate HTML and CSS",
+};
+
+export type SectionType = (typeof SECTIONS)[keyof typeof SECTIONS];
 
 export interface OdinProjectItem {
   title: string;
-  type: SECTIONS;
+  type: SectionType;
   description: string;
   website: string;
   repository?: string;
@@ -17,4 +19,5 @@ export interface OdinProjectItem {
     src: ImageMetadata;
     alt: string;
   };
+  tags: string[];
 }
