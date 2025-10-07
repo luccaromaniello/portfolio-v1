@@ -9,9 +9,9 @@ interface Props {
 const { title, links } = Astro.props;
 ---
 
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-3 flex-wrap">
   <p class="text-md font-medium">{title}</p>
-  <ul class="flex flex-col gap-3">
+  <ul class="flex flex-row md:flex-col flex-wrap md:flex-nowrap gap-3">
     {
       links.map((link) => (
         <li>
