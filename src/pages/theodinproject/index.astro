@@ -1,0 +1,25 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/sections/Footer.astro";
+import SideLinks from "@components/navigation/SideLinks.astro";
+import {
+  PROJECT_ODIN_SITE_DESCRIPTION,
+  PROJECT_ODIN_SITE_TITLE,
+  baseLayout,
+} from "@constants";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={PROJECT_ODIN_SITE_TITLE}
+      description={PROJECT_ODIN_SITE_DESCRIPTION}
+    />
+  </head>
+  <body class="font-satoshi">
+    <SideLinks />
+    <main class={baseLayout}></main>
+    <Footer class={baseLayout} />
+  </body>
+</html>
