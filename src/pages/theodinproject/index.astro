@@ -24,7 +24,7 @@ const sections = Object.entries(SECTIONS);
   </head>
   <body class="font-satoshi">
     <SideLinks showHomeButton />
-    <main class={`${baseLayout} my-8 grid grid-cols-1 gap-16 md:gap-y-32`}>
+    <main class={`${baseLayout} my-8`}>
       <h1
         class="text-3xl md:text-6xl uppercase font-bold text-white text-center justify-self-center"
       >
@@ -41,7 +41,7 @@ const sections = Object.entries(SECTIONS);
               <h2 class="text-xl 2xl:text-2xl uppercase text-content-secondary pb-6 md:pb-12 text-center">
                 {label}
               </h2>
-              <div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-12">
+              <div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-12 items-start">
                 {sectionProjects.map((project) => (
                   <ProjectTile project={project} />
                 ))}
