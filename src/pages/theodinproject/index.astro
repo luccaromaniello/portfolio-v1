@@ -10,6 +10,7 @@ import {
 import { odinProjects } from "@data/odinProjects";
 import ProjectTile from "@components/theodinproject/ProjectTile.astro";
 import { SECTIONS } from "@typeDefs/odinProject";
+import ButtonLink from "@components/ui/ButtonLink.astro";
 
 const sections = Object.entries(SECTIONS);
 ---
@@ -24,12 +25,19 @@ const sections = Object.entries(SECTIONS);
   </head>
   <body class="font-satoshi">
     <SideLinks />
-    <main class={baseLayout}>
-      <h1
-        class="text-3xl md:text-6xl uppercase font-bold text-white text-center"
-      >
-        The Odin Project
-      </h1>
+    <main class={`${baseLayout} my-16`}>
+      <div class="flex flex-row justify-between items-center">
+        <nav class="mb-8">
+          <ButtonLink label="Home" href="/" external={false} />
+        </nav>
+        <div class="flex">
+          <h1
+            class="text-3xl md:text-6xl uppercase font-bold text-white text-center"
+          >
+            The Odin Project
+          </h1>
+        </div>
+      </div>
       {
         sections.map(([key, label]) => {
           const sectionProjects = odinProjects.filter(
@@ -41,7 +49,7 @@ const sections = Object.entries(SECTIONS);
               <h2 class="text-md md:text-xl 2xl:text-2xl uppercase text-content-secondary pb-3 md:pb-12 text-center">
                 {label}
               </h2>
-              <div class="grid grid-cols-1 gap-12 2xl:gap-16">
+              <div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-12">
                 {sectionProjects.map((project) => (
                   <ProjectTile project={project} />
                 ))}
