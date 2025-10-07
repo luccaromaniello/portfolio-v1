@@ -24,20 +24,13 @@ const sections = Object.entries(SECTIONS);
     />
   </head>
   <body class="font-satoshi">
-    <SideLinks />
-    <main class={`${baseLayout} my-16`}>
-      <div class="flex flex-row justify-between items-center">
-        <nav class="mb-8">
-          <ButtonLink label="Home" href="/" external={false} />
-        </nav>
-        <div class="flex">
-          <h1
-            class="text-3xl md:text-6xl uppercase font-bold text-white text-center"
-          >
-            The Odin Project
-          </h1>
-        </div>
-      </div>
+    <SideLinks showHomeButton />
+    <main class={`${baseLayout} my-8 grid grid-cols-1 gap-16`}>
+      <h1
+        class="text-3xl md:text-6xl uppercase font-bold text-white text-center justify-self-center"
+      >
+        The Odin Project
+      </h1>
       {
         sections.map(([key, label]) => {
           const sectionProjects = odinProjects.filter(
