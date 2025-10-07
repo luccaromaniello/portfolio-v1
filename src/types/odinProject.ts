@@ -1,5 +1,5 @@
 export const SECTIONS = {
-  NODE: "NodeJS",
+  NODE: "Node.JS",
   DATABASES: "Databases",
   REACT: "React",
   ADVANCED_HTML_CSS: "Advanced HTML and CSS",
