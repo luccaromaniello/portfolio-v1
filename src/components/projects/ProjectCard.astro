@@ -49,8 +49,20 @@ const {
     <div
       class="flex flex-col md:flex-row gap-6 justify-center xl:justify-start"
     >
-      <ButtonLink label="View project" href={website.href} />
-      {repository && <ButtonLink label="View repository" href={repository} />}
+      <ButtonLink
+        label="View project"
+        href={website.href}
+        external={website.external}
+      />
+      {
+        repository && (
+          <ButtonLink
+            label="View repository"
+            href={repository}
+            external={website.external}
+          />
+        )
+      }
     </div>
   </div>
   <div

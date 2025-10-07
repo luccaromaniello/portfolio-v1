@@ -12,9 +12,7 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div
-  class="grid grid-cols-[minmax(15%,196px)_repeat(3,1fr)] gap-8 items-center"
->
+<div class="grid grid-cols-1 gap-4 items-center">
   <div>
     {
       project.image && (
@@ -30,20 +28,24 @@ const { project } = Astro.props;
     <h3 class="text-3xl md:text-lg font-medium text-white">
       {project.title}
     </h3>
-    <p class="font-light text-content-secondary text-balance">
+    <p class="font-light text-content-secondary">
       {project.description}
     </p>
-    <!-- <ChipGroup chips={project.tags} /> -->
+    <ChipGroup chips={project.tags} />
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <div class="justify-self-start">
+        <TextLink link={{ label: "View project", url: project.website }} />
+      </div>
+      {
+        project.repository && (
+          <div class="justify-self-start">
+            <TextLink
+              link={{ label: "View repository", url: project.repository }}
+            />
+          </div>
+        )
+      }
+    </div>
   </div>
-  <ChipGroup chips={project.tags} />
-  <div class="grid grid-cols-2 gap-4">
-    <TextLink link={{ label: "View project", url: project.website }} />
-    {
-      project.repository && (
-        <TextLink
-          link={{ label: "View repository", url: project.repository }}
-        />
-      )
-    }
-  </div>
+  <!-- <ChipGroup chips={project.tags} /> -->
 </div>
