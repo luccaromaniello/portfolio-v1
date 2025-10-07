@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { link, size = "medium" } = Astro.props;
+const { pathname } = Astro.url;
 
 const buttonVariant = {
   small: "text-sm md:text-base",
@@ -28,7 +29,7 @@ const baseStyle = `
     <a
       href={link.url}
       aria-label={link.label}
-      target="_blank"
+      target={pathname === link.url ? "_self" : "_blank"}
       rel="noopener noreferrer"
       class={`${buttonVariant[size]} ${baseStyle}`}
     >
