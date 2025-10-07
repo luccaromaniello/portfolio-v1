@@ -9,6 +9,9 @@ import {
 } from "@constants";
 import { odinProjects } from "@data/odinProjects";
 import ProjectTile from "@components/theodinproject/ProjectTile.astro";
+import { SECTIONS } from "@typeDefs/odinProject";
+
+const sections = Object.entries(SECTIONS);
 ---
 
 <!doctype html>
@@ -27,7 +30,26 @@ import ProjectTile from "@components/theodinproject/ProjectTile.astro";
       >
         The Odin Project
       </h1>
-      {odinProjects.map((project) => <ProjectTile project={project} />)}
+      {
+        sections.map(([key, label]) => {
+          const sectionProjects = odinProjects.filter(
+            (project) => project.type === label,
+          );
+
+          return (
+            <section>
+              <h2 class="text-md md:text-xl 2xl:text-2xl uppercase text-content-secondary pb-3 md:pb-12 text-center">
+                {label}
+              </h2>
+              <div class="grid grid-cols-1 gap-12 2xl:gap-16">
+                {sectionProjects.map((project) => (
+                  <ProjectTile project={project} />
+                ))}
+              </div>
+            </section>
+          );
+        })
+      }
     </main>
     <Footer class={baseLayout} />
   </body>

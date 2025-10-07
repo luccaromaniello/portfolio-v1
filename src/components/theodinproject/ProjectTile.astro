@@ -2,6 +2,8 @@
 import ButtonLink from "@components/ui/ButtonLink.astro";
 import { Image } from "astro:assets";
 import type { OdinProjectItem } from "@typeDefs/odinProject";
+import ChipGroup from "@components/ui/ChipGroup.astro";
+import TextLink from "@components/ui/TextLink.astro";
 
 interface Props {
   project: OdinProjectItem;
@@ -10,36 +12,38 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div class={`flex flex-col xl:flex-row md:gap-24 2xl:gap-0`}>
-  <div class="flex flex-col gap-8 justify-center xl:w-2/5 2xl:w-1/2">
-    <div class="flex flex-col gap-4 text-center xl:text-start">
-      <h3 class="text-3xl md:text-6xl uppercase font-bold text-white">
-        {project.title}
-      </h3>
-      <p
-        class="text-lg md:text-xl font-light text-content-secondary text-balance"
-      >
-        {project.description}
-      </p>
-    </div>
-    <div class="w-full h-full xl:hidden overflow-hidden rounded-xl">
-      <div>
-        {
-          project.image && (
-            <Image src={project.image.src} alt={project.image.alt} />
-          )
-        }
-      </div>
-    </div>
-    <div
-      class="flex flex-col md:flex-row gap-6 justify-center xl:justify-start"
-    >
-      <!-- <ButtonLink label="View project" href={website.href} /> -->
-      {
-        project.repository && (
-          <ButtonLink label="View repository" href={project.repository} />
-        )
-      }
-    </div>
+<div
+  class="grid grid-cols-[minmax(15%,196px)_repeat(3,1fr)] gap-8 items-center"
+>
+  <div>
+    {
+      project.image && (
+        <Image
+          src={project.image.src}
+          alt={project.image.alt}
+          class="rounded-xl object-contain"
+        />
+      )
+    }
+  </div>
+  <div class="flex flex-col gap-1 text-center xl:text-start">
+    <h3 class="text-3xl md:text-lg font-medium text-white">
+      {project.title}
+    </h3>
+    <p class="font-light text-content-secondary text-balance">
+      {project.description}
+    </p>
+    <!-- <ChipGroup chips={project.tags} /> -->
+  </div>
+  <ChipGroup chips={project.tags} />
+  <div class="grid grid-cols-2 gap-4">
+    <TextLink link={{ label: "View project", url: project.website }} />
+    {
+      project.repository && (
+        <TextLink
+          link={{ label: "View repository", url: project.repository }}
+        />
+      )
+    }
   </div>
 </div>
