@@ -42,4 +42,4 @@ export const SOCIAL_ICONS = {
 
 // styles
 export const baseLayout =
-  "px-8 md:px-20 lg:px-28 xl:px-36 grid grid-cols-1 gap-16 md:gap-32 max-w-[1632px] mx-auto my-12";
+  "px-8 md:px-20 lg:px-16 xl:px-80 grid grid-cols-1 gap-16 md:gap-12 max-w-[1440px] mx-auto my-16";
