@@ -1,12 +1,8 @@
 ---
-import Hero from "@components/sections/Hero.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "@components/sections/Footer.astro";
-import Projects from "@components/sections/Projects.astro";
+import { Hero, Projects, Experience, Education, Footer } from "@modules";
+import { BaseHead } from "@components";
+import { SideLinks } from "@components/navigation";
 import { SITE_DESCRIPTION, SITE_TITLE, baseLayout } from "@constants";
-import SideLinks from "@components/navigation/SideLinks.astro";
-import Experience from "@components/sections/Experience.astro";
-import Education from "@components/sections/Education.astro";
 ---
 
 <!doctype html>

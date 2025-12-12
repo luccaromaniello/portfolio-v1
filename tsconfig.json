@@ -6,9 +6,12 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],
+      "@components": ["src/components/index.ts"],
       "@components/*": ["src/components/*"],
       "@constants": ["src/consts"],
       "@data/*": ["src/data/*"],
+      "@modules": ["src/modules/index.ts"],
+      "@modules/*": ["src/modules/*"],
       "@typeDefs/*": ["src/types/*"]
     },
     "strictNullChecks": true,
