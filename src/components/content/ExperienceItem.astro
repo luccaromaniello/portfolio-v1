@@ -11,15 +11,15 @@ const { experience } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,288px)_1fr] 2xl:grid-cols-[minmax(20%,384px)_minmax(0,1024px)] py-4 gap-4 xl:gap-28"
+  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,288px)_1fr] 2xl:grid-cols-[minmax(20%,240px)_minmax(0,1024px)] py-4 gap-12"
 >
   <div
     class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-start"
   >
-    <p class="text-sm md:text-lg lg:text-xl 2xl:text-2xl font-light">
+    <p class="text-sm md:text-lg lg:text-xl font-light">
       {experience.location}
     </p>
-    <p class="text-content-secondary text-sm md:text-lg lg:text-lg">
+    <p class="text-content-secondary text-sm md:text-base">
       {experience.startDate}
       {
         experience.current ? (
@@ -42,10 +42,9 @@ const { experience } = Astro.props;
     </p>
   </div>
   <div class={`flex flex-col ${experience.description && "gap-4"}`}>
-    <div class="flex flex-col gap-1 md:gap-2">
+    <div class="flex flex-col gap-1">
       <p>
-        <span
-          class="font-medium text-xl md:text-3xl lg:text-2xl 2xl:text-3xl uppercase"
+        <span class="font-medium text-xl md:text-3xl lg:text-2xl uppercase"
           >{experience.title}
         </span>
       </p>
@@ -55,6 +54,7 @@ const { experience } = Astro.props;
             ?.map((company, i) => (
               <TextLink
                 link={{ label: company.name, url: company.website ?? "" }}
+                size="small"
               />
             ))
             .reduce(
@@ -65,9 +65,7 @@ const { experience } = Astro.props;
       </div>
     </div>
     <div class="flex flex-col gap-2">
-      <p
-        class="text-md md:text-lg font-light text-content-secondary text-pretty"
-      >
+      <p class="text-md font-light text-content-secondary text-pretty">
         {experience.description}
       </p>
       <ChipGroup chips={experience.technologies} />

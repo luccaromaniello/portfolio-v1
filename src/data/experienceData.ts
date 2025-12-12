@@ -1,8 +1,30 @@
 export const workExperience = [
   {
+    title: "Full Stack Engineer",
+    startDate: "Nov 25",
+    current: true,
+    location: "Remote",
+    description:
+      "Araújo Fontes is an independent financial advisory firm providing comprehensive solutions for companies, shareholders, and investors. Its expertise includes Mergers & Acquisitions (M&A), Capital Raising, Corporate and Succession Restructuring, Investment Management, and Foreign Exchange (FX).",
+    technologies: [
+      "React",
+      "Next.js",
+      "TanStack Query",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+      "PHP",
+      "Laravel",
+      "SQL",
+      "Linux",
+    ],
+    companies: [{ name: "Araújo Fontes", website: "https://www.afs.com.br/" }],
+  },
+  {
     title: "Product Designer",
     startDate: "Jul 20",
-    current: true,
+    endDate: "Nov 25",
+    current: false,
     location: "Remote",
     description:
       "I’ve designed and delivered digital experiences across industries like beverages (e-commerce/SaaS), telecom, healthcare, and education. I led projects that improved usability and efficiency, including the redesign of AB InBev’s developer portal, optimization of fluke’s SIM card flow, enhancements to Conexa Saúde’s doctor tools, and the development of a certificate platform for Ânima Educação, serving over 350,000 students.",
