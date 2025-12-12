@@ -1,55 +1,44 @@
 ---
-import videoSrc from "@assets/placeholder-bg.mp4";
+import { IconButton, ButtonLink } from "@components/ui";
+import { MAIL_URL } from "@constants";
 ---
 
-<video
-  autoplay
-  loop
-  muted
-  class="absolute top-0 left-0 w-full h-full brightness-50 grayscale object-cover"
->
-  <source src={videoSrc} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
 <div
-  class="relative flex flex-col lg:flex-row w-full h-screen justify-end lg:justify-start items-center text-white min-h-screen px-8 py-8"
+  class="flex flex-col gap-8 w-full justify-end lg:justify-start text-white px-96 py-16"
 >
-  <div class="flex flex-col gap-12 lg:gap-24 lg:w-2/3">
+  <div class="flex flex-col gap-12 lg:gap-4 w-full">
     <div
-      class="flex flex-col gap-2 md:gap-4 font-cormorand text-center lg:text-start uppercase"
+      class="flex flex-row font-cormorand uppercase items-center justify-between"
     >
+      <!-- <h1 class="text-5xl md:text-8xl xl:text-4xl font-medium">
+        Lucca Romaniello
+      </h1> -->
       <h1
-        class="text-5xl md:text-8xl xl:text-9xl font-medium xl:leading-32 2xl:leading-30"
+        class="text-5xl font-satoshi leading-snug font-bold inline-block text-white tracking-wider"
       >
+        <!-- LUCCA ROMANIELLO Full Stack Engineer with a product design background -->
         Lucca Romaniello
       </h1>
-      <h2
-        class="text-base xl:text-2xl font-satoshi leading-snug font-light inline-block text-white/60 tracking-wider"
-      >
-        Full Stack Engineer with a product design background
-      </h2>
+      <div class="flex flex-col">
+        <p>GitHub</p>
+        <p>LinkedIn</p>
+        <p>Mail</p>
+      </div>
     </div>
     <div
-      class="flex flex-col gap-2 leading-relaxed text-center lg:text-start xl:text-xl font-light 2xl:pr-24 text-content-secondary tracking-wide"
+      class="flex flex-col gap-2 leading-relaxed font-light text-content-secondary tracking-wide"
     >
-      <p>6+ years blending engineering and design.</p>
+      <p>
+        Full Stack Engineer with a product design background. 6+ years blending
+        engineering and design.
+      </p>
       <p>
         Based in Brazil, working globally. Open to full-time and freelance work.
       </p>
-      <video
-        autoplay
-        muted
-        width="320"
-        height="240"
-        class="absolute top-0 left-0 w-full h-full brightness-20 grayscale"
-      >
-        <source src="../assets/placeholder-bg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
     </div>
   </div>
-  <div class="order-first lg:order-none text-content-secondary">
-    <p class="font-caveat text-xl text-center mx-12">
+  <div class="text-content-secondary">
+    <p class="font-caveat text-xl">
       On most days, you’ll find me with some
       <a
         href="https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo"
@@ -58,11 +47,7 @@ import videoSrc from "@assets/placeholder-bg.mp4";
       >
         pão de queijo
       </a>
-      and a cup of black coffee. No sugar.
-    </p>
-    <p class="font-caveat text-xl text-center">
-      This one is for you!
-      <!-- <span>Don’t worry, it’s still warm.</span> -->
+      and a cup of black coffee. No sugar. This one is for you:
     </p>
   </div>
 </div>
