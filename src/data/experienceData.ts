@@ -47,7 +47,7 @@ export const workExperience = [
     ],
   },
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Engineer",
     startDate: "Apr 19",
     endDate: "Jul 20",
     current: false,

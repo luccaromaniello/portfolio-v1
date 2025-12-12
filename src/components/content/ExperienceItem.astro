@@ -11,15 +11,15 @@ const { experience } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,288px)_1fr] 2xl:grid-cols-[minmax(20%,240px)_minmax(0,1024px)] py-4 gap-12"
+  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,288px)_1fr] 2xl:grid-cols-[minmax(20%,196px)_minmax(0,1024px)] py-4 gap-12"
 >
   <div
     class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-start"
   >
-    <p class="text-sm md:text-lg lg:text-xl font-light">
+    <p class="text-sm md:text-sm font-light">
       {experience.location}
     </p>
-    <p class="text-content-secondary text-sm md:text-base">
+    <p class="text-content-secondary text-sm md:text-sm">
       {experience.startDate}
       {
         experience.current ? (
@@ -44,7 +44,7 @@ const { experience } = Astro.props;
   <div class={`flex flex-col ${experience.description && "gap-4"}`}>
     <div class="flex flex-col gap-1">
       <p>
-        <span class="font-medium text-xl md:text-3xl lg:text-2xl uppercase"
+        <span class="font-medium text-xl md:text-3xl lg:text-base uppercase"
           >{experience.title}
         </span>
       </p>
