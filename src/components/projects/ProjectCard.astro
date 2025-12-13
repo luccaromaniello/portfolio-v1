@@ -1,6 +1,6 @@
 ---
-import ButtonLink from "@components/ui/ButtonLink.astro";
 import { Image } from "astro:assets";
+import IconButton from "@components/ui/IconButton.astro";
 
 interface Props {
   title: string;
@@ -27,48 +27,42 @@ const {
 } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 xl:grid-cols-2 gap-8 2xl:gap-2 items-center">
-  <div class="flex flex-col gap-6 text-center xl:text-start">
-    <div class="flex flex-col gap-4">
-      <h3 class="text-3xl md:text-6xl uppercase font-bold text-white">
-        {title}
-      </h3>
-      <p
-        class="text-lg md:text-xl font-light text-content-secondary text-balance"
-      >
-        {description}
-      </p>
-    </div>
-
-    <div class="xl:hidden overflow-hidden rounded-xl group">
-      <div class="transition-transform duration-500 group-hover:scale-105">
+<a
+  href={website.href}
+  aria-label={title}
+  rel="noopener noreferrer"
+  target={website.external ? "_blank" : "_self"}
+>
+  <div
+    class="grid grid-cols-1 xl:grid-cols-2 gap-8 2xl:gap-8 items-center p-8 border-2 border-transparent hover:border-white hover:brightness-120
+  rounded-sm hover:shadow-[3px_3px_0_0_#AE1E5F] transition-colors hover:cursor-pointer group transform hover:-translate-y-1 hover:scale-[1.02]"
+  >
+    <div class="hidden xl:block overflow-hidden rounded-sm">
+      <div class="">
         {image && <Image src={image.src} alt={image.alt} />}
       </div>
     </div>
 
-    <div
-      class="flex flex-col md:flex-row gap-6 justify-center xl:justify-start"
-    >
-      <ButtonLink
-        label="View project"
-        href={website.href}
-        external={website.external}
-      />
-      {
-        repository && (
-          <ButtonLink
-            label="View repository"
-            href={repository}
-            external={website.external}
-          />
-        )
-      }
-    </div>
-  </div>
+    <div class="flex flex-col gap-6 text-center xl:text-start">
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-row gap-1 items-center justify-start">
+          <h3 class="text-3xl md:text-xl uppercase font-bold">
+            {title}
+          </h3>
+          <IconButton icon="externalLink" size="xs" />
+        </div>
+        <p
+          class="text-lg md:text-base font-light text-content-secondary text-balance"
+        >
+          {description}
+        </p>
+      </div>
 
-  <div class="hidden xl:block overflow-hidden rounded-xl group">
-    <div class="transition-transform duration-500 group-hover:scale-105">
-      {image && <Image src={image.src} alt={image.alt} />}
+      <div class="xl:hidden overflow-hidden rounded-xl group">
+        <div class="transition-transform duration-500 group-hover:scale-105">
+          {image && <Image src={image.src} alt={image.alt} />}
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</a>

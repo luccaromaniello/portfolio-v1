@@ -3,9 +3,10 @@ import { SOCIAL_ICONS } from "@constants";
 
 interface Props {
   icon: keyof typeof SOCIAL_ICONS;
+  size: "xs" | "sm" | "lg";
 }
 
-const { icon } = Astro.props;
+const { icon, size } = Astro.props;
 const IconComponent = SOCIAL_ICONS[icon].icon;
 ---
 
@@ -15,7 +16,7 @@ const IconComponent = SOCIAL_ICONS[icon].icon;
   aria-label={SOCIAL_ICONS[icon].link.label}
   target="_blank"
   rel="noopener noreferrer"
-  class={`text-white hover:text-primary w-6 h-6 2xl:w-8 2xl:h-8`}
+  class={`text-white hover:text-primary ${size === "xs" ? "w-4 h-4" : size === "sm" ? "w-6 h-6" : "w-8 h-8"}`}
 >
   <IconComponent />
 </a>

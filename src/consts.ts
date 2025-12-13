@@ -1,3 +1,4 @@
+import ExternalLinkIcon from "@assets/icons/external-link.svg";
 import GithubIcon from "@assets/icons/github.svg";
 import LinkedinIcon from "@assets/icons/linkedin.svg";
 import type { Link } from "@typeDefs/link";
@@ -22,6 +23,14 @@ export const PROJECT_ODIN_REPO_URL =
 export const PROJECT_PORTFOLIO_V0_URL = "https://www.v0.luccaromaniello.com";
 
 export const SOCIAL_ICONS = {
+  externalLink: {
+    alt: "External link icon",
+    icon: ExternalLinkIcon,
+    link: {
+      label: "External link",
+      url: WEBSITE_URL,
+    } as Link,
+  },
   github: {
     alt: "GitHub icon",
     icon: GithubIcon,
