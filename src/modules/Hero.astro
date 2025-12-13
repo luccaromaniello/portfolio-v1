@@ -1,6 +1,6 @@
 ---
 import { IconButton, ButtonLink, TextLink } from "@components/ui";
-import { MAIL_URL } from "@constants";
+import { GITHUB_URL, LINKEDIN_URL, MAIL_URL } from "@constants";
 ---
 
 <div
@@ -46,10 +46,10 @@ import { MAIL_URL } from "@constants";
       and a cup of black coffee. No sugar. This one is for you:
     </p>
   </div>
-  <div class="flex flex-row gap-8">
-    <ButtonLink label="GitHub" href={MAIL_URL} />
-    <ButtonLink label="LinkedIn" href={MAIL_URL} />
-    <ButtonLink label="Contact" href={MAIL_URL} />
+  <div class="flex flex-row gap-5 items-center">
+    <ButtonLink icon="github" label="GitHub" href={GITHUB_URL} external />
+    <ButtonLink icon="linkedin" label="LinkedIn" href={LINKEDIN_URL} external />
+    <ButtonLink icon="mail" label="Contact" href={MAIL_URL} external />
   </div>
 </div>
 

@@ -1,6 +1,7 @@
 import ExternalLinkIcon from "@assets/icons/external-link.svg";
 import GithubIcon from "@assets/icons/github.svg";
 import LinkedinIcon from "@assets/icons/linkedin.svg";
+import MailIcon from "@assets/icons/mail.svg";
 import type { Link } from "@typeDefs/link";
 
 export const SITE_TITLE = "Lucca Romaniello";
@@ -45,6 +46,14 @@ export const SOCIAL_ICONS = {
     link: {
       label: "LinkedIn",
       url: LINKEDIN_URL,
+    } as Link,
+  },
+  mail: {
+    alt: "Mail icon",
+    icon: MailIcon,
+    link: {
+      label: "External link",
+      url: MAIL_URL,
     } as Link,
   },
 };
