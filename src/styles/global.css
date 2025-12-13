@@ -38,3 +38,64 @@ body {
   font-family: Satoshi, sans-serif;
   background-color: var(--neutral-primary);
 }
+
+/* START HERO H1 ANIMATION */
+.anaglyph::before,
+.anaglyph::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  white-space: inherit;
+  z-index: -1;
+  opacity: 0.8;
+  text-shadow: 0 0 6px currentColor;
+}
+
+.anaglyph::before {
+  color: #00e5ff;
+  transform: translateX(-1.5px);
+  filter: blur(0.25px);
+  animation: anaglyph-left 3.5s ease-in-out infinite;
+}
+
+.anaglyph::after {
+  color: #ae1e5f;
+  transform: translateX(1.5px);
+  filter: blur(0.45px);
+  animation: anaglyph-right 3.5s ease-in-out infinite;
+}
+
+@keyframes anaglyph-left {
+  0%,
+  100% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+@keyframes anaglyph-right {
+  0%,
+  100% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anaglyph::before,
+  .anaglyph::after {
+    animation: none;
+  }
+}
+/* END HERO H1 ANIMATION */
