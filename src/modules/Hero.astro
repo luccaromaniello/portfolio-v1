@@ -1,5 +1,5 @@
 ---
-import { IconButton, ButtonLink } from "@components/ui";
+import { IconButton, ButtonLink, TextLink } from "@components/ui";
 import { MAIL_URL } from "@constants";
 ---
 
@@ -35,13 +35,14 @@ import { MAIL_URL } from "@constants";
   <div class="text-content-secondary">
     <p class="font-caveat text-xl">
       On most days, you’ll find me with some
-      <a
-        href="https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        pão de queijo
-      </a>
+      <TextLink
+        link={{
+          label: "pão de queijo",
+          url: "https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo",
+        }}
+        size="medium"
+        cursive
+      />
       and a cup of black coffee. No sugar. This one is for you:
     </p>
   </div>

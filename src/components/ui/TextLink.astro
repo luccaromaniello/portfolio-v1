@@ -5,9 +5,10 @@ import { MAIL_URL } from "@constants";
 interface Props {
   link: Link;
   size?: "small" | "medium" | "large";
+  cursive?: boolean;
 }
 
-const { link, size = "medium" } = Astro.props;
+const { link, size = "medium", cursive = false } = Astro.props;
 const { pathname } = Astro.url;
 
 const buttonVariant = {
@@ -31,7 +32,7 @@ const baseStyle = `
       aria-label={link.label}
       target={pathname === link.url ? "_self" : "_blank"}
       rel="noopener noreferrer"
-      class={`${buttonVariant[size]} ${baseStyle}`}
+      class={`${buttonVariant[size]} ${baseStyle} ${cursive ? "font-caveat" : ""}`}
     >
       {link.label.trim()}
     </a>
