@@ -36,7 +36,7 @@ export const educationHistory = [
   {
     companies: [
       {
-        name: "Pontifícia Católica Universidade de Minas Gerais",
+        name: "PUC Minas",
         website: "https://www.linkedin.com/school/pucminas/",
       },
     ],
@@ -61,7 +61,7 @@ export const educationHistory = [
   {
     companies: [
       {
-        name: "Pontifícia Católica Universidade de Minas Gerais",
+        name: "PUC Minas",
         website: "https://www.linkedin.com/school/pucminas/",
       },
     ],

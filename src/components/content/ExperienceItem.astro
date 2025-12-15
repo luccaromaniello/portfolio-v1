@@ -11,9 +11,12 @@ const { experience } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,144px)_1fr] 2xl:grid-cols-[minmax(20%,196px)_minmax(0,1024px)] py-4 gap-12"
+  class="grid grid-cols-1 xl:grid-cols-[1fr_minmax(20%,144px)] 2xl:grid-cols-[minmax(0,1024px)_minmax(20%,196px)] py-4 gap-14 2xl:gap-18"
 >
-  <div
+  <!-- <div
+  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,144px)_1fr] 2xl:grid-cols-[minmax(20%,196px)_minmax(0,1024px)] py-4 gap-12"
+> -->
+  <!-- <div
     class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-start pt-1"
   >
     <p class="text-sm md:text-sm font-light">
@@ -40,11 +43,11 @@ const { experience } = Astro.props;
         )
       }
     </p>
-  </div>
+  </div> -->
   <div class={`flex flex-col ${experience.description && "gap-2"}`}>
     <div class="flex flex-wrap items-baseline">
       <span class="font-medium text-xl md:text-3xl lg:text-base uppercase"
-        >{experience.title} —&nbsp;
+        >{experience.title} ·&nbsp;
       </span>
       {
         experience.companies && experience.companies.length > 0 && (
@@ -53,7 +56,7 @@ const { experience } = Astro.props;
               <>
                 <TextLink
                   link={{ label: company.name, url: company.website ?? "" }}
-                  size="medium"
+                  size="small"
                 />
                 {i < experience.companies.length - 1 && <span>,&nbsp;</span>}
               </>
@@ -68,5 +71,33 @@ const { experience } = Astro.props;
       </p>
       <ChipGroup chips={experience.technologies} />
     </div>
+  </div>
+  <div
+    class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-end pt-1"
+  >
+    <p class="text-sm md:text-sm font-light">
+      {experience.location}
+    </p>
+    <p class="text-content-secondary text-sm md:text-sm">
+      {experience.startDate}
+      {
+        experience.current ? (
+          <>
+            {" - "}
+            <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
+              now
+            </span>
+          </>
+        ) : (
+          experience.endDate &&
+          experience.endDate !== experience.startDate && (
+            <>
+              {" - "}
+              <span>{experience.endDate}</span>
+            </>
+          )
+        )
+      }
+    </p>
   </div>
 </div>
