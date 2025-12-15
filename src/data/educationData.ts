@@ -15,14 +15,14 @@ export const educationHistory = [
   {
     companies: [
       {
-        name: "Y Combinator ",
+        name: "Y Combinator",
         website: "https://www.ycombinator.com/",
       },
     ],
     title: "Startup School",
     highlight: false,
     startDate: "2025",
-    endDate: "2025",
+    endDate: "2026",
     location: "Remote",
     current: false,
     technologies: [
@@ -31,6 +31,30 @@ export const educationHistory = [
       "Networking",
       "MVP Development",
       "Startup Fundraising",
+    ],
+  },
+  {
+    companies: [
+      {
+        name: "curso.dev",
+        website: "https://curso.dev/",
+      },
+    ],
+    title: "curso.dev",
+    highlight: false,
+    startDate: "2025",
+    endDate: "2026",
+    location: "Remote",
+    current: true,
+    technologies: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "CI/CD",
+      "PostgreSQL",
+      "Docker",
+      "TDD",
+      "Infrastructure as Code",
     ],
   },
   {
