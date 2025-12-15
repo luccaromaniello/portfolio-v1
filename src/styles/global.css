@@ -4,6 +4,7 @@
   --neutral-primary: hsl(60, 0%, 0%);
   --neutral-secondary: hsl(0, 0%, 55%);
   --primary: hsl(332, 70%, 40%);
+  --primary-light: hsl(332, 70%, 60%);
 }
 
 @font-face {
@@ -32,6 +33,7 @@
   --background: var(--neutral-primary);
   --color-content-secondary: var(--neutral-secondary);
   --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
 }
 
 body {
