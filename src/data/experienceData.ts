@@ -5,7 +5,7 @@ export const workExperience = [
     current: true,
     location: "Remote",
     description:
-      "Araújo Fontes is an independent financial advisory firm providing comprehensive solutions for companies, shareholders, and investors. Its expertise includes Mergers & Acquisitions (M&A), Capital Raising, Corporate and Succession Restructuring, Investment Management, and Foreign Exchange (FX).",
+      "Building web applications for an independent financial advisory firm specializing in M&A, capital raising, and investment management. Developing tools to manage contracts and operational processes while contributing to design decisions, leveraging my product design background. Working across the full stack with React/Next.js and Laravel.",
     technologies: [
       "React",
       "Next.js",
@@ -27,7 +27,7 @@ export const workExperience = [
     current: false,
     location: "Remote",
     description:
-      "I’ve designed and delivered digital experiences across industries like beverages (e-commerce/SaaS), telecom, healthcare, and education. I led projects that improved usability and efficiency, including the redesign of AB InBev’s developer portal, optimization of fluke’s SIM card flow, enhancements to Conexa Saúde’s doctor tools, and the development of a certificate platform for Ânima Educação, serving over 350,000 students.",
+      "Designed digital experiences across beverage, telecom, healthcare, and education industries, from startups to multinationals like AB InBev and major Brazilian companies like Ânima Educação. Led projects including AB InBev's developer portal redesign, SIM card flow optimization for fluke, doctor tools for Conexa Saúde, and a certificate platform serving 350K+ students at Ânima Educação.",
     technologies: [
       "UI/UX design",
       "Design systems",
@@ -53,7 +53,7 @@ export const workExperience = [
     current: false,
     location: "Belo Horizonte, Brazil",
     description:
-      "Localiza&Co offers mobility solutions across seven Latin American countries, including car rentals, subscriptions, fleet outsourcing, and vehicle sales. While there, I worked as a mobile and backend developer on an app migration from hybrid to native, used by carport operators. I also contributed as a frontend developer to internal tools built by dti, supporting visual management and merit-based recognition.",
+      "Developed mobile and backend solutions for Localiza&Co, one of Latin America's largest car rental companies. Migrated a carport operator app from hybrid to native and contributed to dti's internal tools for visual management and merit-based recognition systems.",
     technologies: ["Vue.js", "Kotlin", "Flutter", "C#", "ASP.NET"],
     companies: [
       {
