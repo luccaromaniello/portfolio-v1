@@ -42,27 +42,25 @@ const { experience } = Astro.props;
     </p>
   </div>
   <div class={`flex flex-col ${experience.description && "gap-4"}`}>
-    <div class="flex flex-col gap-1">
-      <p>
-        <span class="font-medium text-xl md:text-3xl lg:text-base uppercase"
-          >{experience.title}
-        </span>
-      </p>
-      <div>
-        {
-          experience.companies
-            ?.map((company, i) => (
-              <TextLink
-                link={{ label: company.name, url: company.website ?? "" }}
-                size="small"
-              />
-            ))
-            .reduce(
-              (acc, curr, idx) => (idx === 0 ? [curr] : [...acc, ", ", curr]),
-              [],
-            )
-        }
-      </div>
+    <div class="flex flex-wrap items-baseline">
+      <span class="font-medium text-xl md:text-3xl lg:text-base uppercase"
+        >{experience.title} —&nbsp;
+      </span>
+      {
+        experience.companies && experience.companies.length > 0 && (
+          <>
+            {experience.companies?.map((company, i) => (
+              <>
+                <TextLink
+                  link={{ label: company.name, url: company.website ?? "" }}
+                  size="medium"
+                />
+                {i < experience.companies.length - 1 && <span>,&nbsp;</span>}
+              </>
+            ))}
+          </>
+        )
+      }
     </div>
     <div class="flex flex-col gap-2">
       <p class="text-md font-light text-content-secondary text-pretty">
