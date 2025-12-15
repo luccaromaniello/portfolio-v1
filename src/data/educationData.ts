@@ -15,27 +15,6 @@ export const educationHistory = [
   {
     companies: [
       {
-        name: "Y Combinator",
-        website: "https://www.ycombinator.com/",
-      },
-    ],
-    title: "Startup School",
-    highlight: false,
-    startDate: "2025",
-    endDate: "2026",
-    location: "Remote",
-    current: false,
-    technologies: [
-      "Entrepreneurship",
-      "Decision making",
-      "Networking",
-      "MVP Development",
-      "Startup Fundraising",
-    ],
-  },
-  {
-    companies: [
-      {
         name: "curso.dev",
         website: "https://curso.dev/",
       },
@@ -55,6 +34,27 @@ export const educationHistory = [
       "Docker",
       "TDD",
       "Infrastructure as Code",
+    ],
+  },
+  {
+    companies: [
+      {
+        name: "Y Combinator",
+        website: "https://www.ycombinator.com/",
+      },
+    ],
+    title: "Startup School",
+    highlight: false,
+    startDate: "2025",
+    endDate: "2026",
+    location: "Remote",
+    current: false,
+    technologies: [
+      "Entrepreneurship",
+      "Decision making",
+      "Networking",
+      "MVP Development",
+      "Startup Fundraising",
     ],
   },
   {
