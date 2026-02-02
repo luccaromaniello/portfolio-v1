@@ -8,83 +8,90 @@ import { baseSpacing } from "@constants";
 ---
 
 <div
-  class={`${baseSpacing} relative flex flex-row gap-8 w-full justify-start text-white pt-24 pb-40 bg-neutral-primary overflow-visible`}
+  class={`${baseSpacing} text-white pt-24 pb-40 bg-neutral-primary overflow-visible`}
 >
-  <div class="flex flex-col gap-12 lg:gap-6 w-full pt-8">
-    <h1
-      data-text="Lucca Romaniello"
-      class="relative z-10 anaglyph text-8xl font-satoshi leading-tight font-bold
-             text-white tracking-wider uppercase"
-    >
-      Lucca Romaniello
-    </h1>
-    <div
-      class="flex flex-col gap-2 leading-relaxed text-2xl text-content-secondary pr-96"
-    >
-      <p class="text-balance">
-        Full Stack Engineer with a product design background. 6+ years blending
-        engineering and design.
-      </p>
-      <p>
-        Based in Brazil, working globally. Open to full-time and freelance work.
-      </p>
-    </div>
-    <div class="flex flex-row gap-6 items-center pt-4">
-      <ButtonLink icon="github" label="GitHub" href={GITHUB_URL} external />
-      <ButtonLink
-        icon="linkedin"
-        label="LinkedIn"
-        href={LINKEDIN_URL}
-        external
-      />
-      <ButtonLink icon="mail" label="Contact" href={MAIL_URL} external />
-    </div>
-  </div>
-  <div class="absolute right-32 w-[480px] h-[560px]">
-    <div class="flex flex-col gap-4 justify-center text-center">
-      <div
-        id="hero-media"
-        oncontextmenu="return false"
-        class="relative border-2 border-white shadow-[3px_3px_0_0_#AE1E5F] rounded-xl overflow-hidden cursor-pointer"
+  <div
+    class="relative flex flex-row gap-8 w-full justify-start mx-auto max-w-[1440px]"
+  >
+    <div class="flex flex-col gap-12 lg:gap-6 w-full pt-10">
+      <h1
+        data-text="Lucca Romaniello"
+        class="relative z-10 anaglyph text-8xl font-satoshi leading-tight font-bold
+              text-white tracking-wider uppercase"
       >
-        <Image
-          src={luccaImage}
-          alt="Lucca Romaniello"
-          class="object-contain object-center -mt-32 transition-opacity duration-150 will-change-[opacity]"
-          id="hero-image"
-        />
-        <video
-          src={coffeeGif}
-          muted
-          playsinline
-          loop
-          class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-150 will-change-[opacity]"
-          id="hero-video"></video>
-        <p
-          id="hero-video-text"
-          class="absolute bottom-4 left-0 right-0 text-center font-caveat text-2xl text-white opacity-0 transition-opacity duration-150 will-change-[opacity] z-10"
-        >
-          This one's for you. Sugar?
+        Lucca Romaniello
+      </h1>
+      <div
+        class="flex flex-col gap-2 leading-relaxed text-2xl text-content-secondary max-w-[840px]"
+      >
+        <p class="text-balance">
+          Full Stack Engineer with a product design background. 6+ years
+          blending engineering and design.
+        </p>
+        <p>
+          Based in Brazil, working globally. Open to full-time and freelance
+          work.
         </p>
       </div>
-      <div class="text-neutral-primary/90">
-        <p class="font-caveat text-2xl">
-          On most days, you’ll find me with some
-          <TextLink
-            link={{
-              label: "pão de queijo",
-              url: "https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo",
-            }}
-            size="large"
-            cursive
-          />
-          and a cup of coffee. No sugar.
-        </p>
-        <p
-          class="absolute font-caveat text-2xl bottom-46 -right-42 rotate-90 text-content-secondary"
+      <div class="flex flex-row gap-6 items-center pt-4">
+        <ButtonLink icon="github" label="GitHub" href={GITHUB_URL} external />
+        <ButtonLink
+          icon="linkedin"
+          label="LinkedIn"
+          href={LINKEDIN_URL}
+          external
+        />
+        <ButtonLink icon="mail" label="Contact" href={MAIL_URL} external />
+      </div>
+    </div>
+    <div
+      class="absolute right-8 md:right-20 lg:right-16 xl:right-72 2xl:right-32 w-[480px] h-[560px]"
+    >
+      <div class="flex flex-col gap-4 justify-center text-center">
+        <div
+          id="hero-media"
+          oncontextmenu="return false"
+          class="relative border-2 border-white shadow-[3px_3px_0_0_#AE1E5F] rounded-xl overflow-hidden cursor-pointer"
         >
-          Coffee's on me. Hover to grab yours.
-        </p>
+          <Image
+            src={luccaImage}
+            alt="Lucca Romaniello"
+            class="object-contain object-center -mt-32 transition-opacity duration-150 will-change-[opacity]"
+            id="hero-image"
+          />
+          <video
+            src={coffeeGif}
+            muted
+            playsinline
+            loop
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-150 will-change-[opacity]"
+            id="hero-video"></video>
+          <p
+            id="hero-video-text"
+            class="absolute bottom-4 left-0 right-0 text-center font-caveat text-2xl text-white opacity-0 transition-opacity duration-150 will-change-[opacity] z-10"
+          >
+            This one's for you. Sugar?
+          </p>
+        </div>
+        <div class="text-neutral-primary/90">
+          <p class="font-caveat text-2xl">
+            On most days, you’ll find me with some
+            <TextLink
+              link={{
+                label: "pão de queijo",
+                url: "https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo",
+              }}
+              size="large"
+              cursive
+            />
+            and a cup of coffee. No sugar.
+          </p>
+          <p
+            class="absolute font-caveat text-2xl bottom-46 -right-42 rotate-90 text-content-secondary"
+          >
+            Coffee's on me. Hover to grab yours.
+          </p>
+        </div>
       </div>
     </div>
   </div>
