@@ -3,6 +3,7 @@ import { IconButton, ButtonLink, TextLink } from "@components/ui";
 import { GITHUB_URL, LINKEDIN_URL, MAIL_URL } from "@constants";
 import { Image } from "astro:assets";
 import luccaImage from "@assets/lucca/lucca-sofa.jpg";
+import coffeeGif from "@assets/lucca/coffee-compressed.mp4";
 import { baseSpacing } from "@constants";
 ---
 
@@ -42,13 +43,29 @@ import { baseSpacing } from "@constants";
   <div class="absolute right-32 w-[480px] h-[560px]">
     <div class="flex flex-col gap-4 justify-center text-center">
       <div
-        class="border-2 border-white shadow-[3px_3px_0_0_#AE1E5F] rounded-xl overflow-hidden"
+        id="hero-media"
+        oncontextmenu="return false"
+        class="relative border-2 border-white shadow-[3px_3px_0_0_#AE1E5F] rounded-xl overflow-hidden cursor-pointer"
       >
         <Image
           src={luccaImage}
           alt="Lucca Romaniello"
-          class="object-contain object-center -mt-32"
+          class="object-contain object-center -mt-32 transition-opacity duration-150 will-change-[opacity]"
+          id="hero-image"
         />
+        <video
+          src={coffeeGif}
+          muted
+          playsinline
+          loop
+          class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-150 will-change-[opacity]"
+          id="hero-video"></video>
+        <p
+          id="hero-video-text"
+          class="absolute bottom-4 left-0 right-0 text-center font-caveat text-2xl text-white opacity-0 transition-opacity duration-150 will-change-[opacity] z-10"
+        >
+          This one's for you. Sugar?
+        </p>
       </div>
       <div class="text-neutral-primary/90">
         <p class="font-caveat text-2xl">
@@ -72,3 +89,28 @@ import { baseSpacing } from "@constants";
     </div>
   </div>
 </div>
+---
+<script>
+  const container = document.getElementById("hero-media");
+  const image = document.getElementById("hero-image") as HTMLImageElement;
+  const video = document.getElementById("hero-video") as HTMLVideoElement;
+  const text = document.getElementById(
+    "hero-video-text",
+  ) as HTMLParagraphElement;
+
+  container?.addEventListener("mouseenter", () => {
+    image.style.opacity = "0";
+    video.style.opacity = "1";
+    text.style.opacity = "1";
+    video.currentTime = 0;
+    video.play();
+  });
+
+  container?.addEventListener("mouseleave", () => {
+    image.style.opacity = "1";
+    video.style.opacity = "0";
+    text.style.opacity = "0";
+    video.pause();
+  });
+</script>
+---
