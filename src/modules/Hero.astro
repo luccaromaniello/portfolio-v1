@@ -1,34 +1,26 @@
 ---
 import { IconButton, ButtonLink, TextLink } from "@components/ui";
 import { GITHUB_URL, LINKEDIN_URL, MAIL_URL } from "@constants";
+import { Image } from "astro:assets";
+import luccaImage from "@assets/lucca/lucca-sofa.jpg";
+import { baseSpacing } from "@constants";
 ---
 
 <div
-  class="flex flex-col gap-8 w-full justify-end lg:justify-start text-white py-16"
+  class={`${baseSpacing} relative flex flex-row gap-8 w-full justify-start text-white pt-24 pb-40 bg-neutral-primary overflow-visible`}
 >
-  <div class="flex flex-col gap-12 lg:gap-4 w-full">
-    <div
-      class="flex flex-row font-cormorand uppercase items-center justify-between"
+  <div class="flex flex-col gap-12 lg:gap-6 w-full pt-8">
+    <h1
+      data-text="Lucca Romaniello"
+      class="relative z-10 anaglyph text-8xl font-satoshi leading-tight font-bold
+             text-white tracking-wider uppercase"
     >
-      <!-- <h1 class="text-5xl md:text-8xl xl:text-4xl font-medium">
-        Lucca Romaniello
-      </h1> -->
-      <h1
-        data-text="Lucca Romaniello"
-        class="relative z-0 anaglyph text-5xl font-satoshi leading-snug font-bold
-               text-white tracking-wider"
-      >
-        <!-- <h1
-        class="text-5xl font-satoshi leading-snug font-bold inline-block text-white tracking-wider text-shadow-[2px_1px_0_#AE1E5F]"
-      > -->
-        <!-- LUCCA ROMANIELLO Full Stack Engineer with a product design background -->
-        Lucca Romaniello
-      </h1>
-    </div>
+      Lucca Romaniello
+    </h1>
     <div
-      class="flex flex-col gap-2 leading-relaxed font-light text-content-secondary tracking-wide"
+      class="flex flex-col gap-2 leading-relaxed text-xl text-content-secondary pr-96"
     >
-      <p>
+      <p class="text-balance">
         Full Stack Engineer with a product design background. 6+ years blending
         engineering and design.
       </p>
@@ -36,30 +28,42 @@ import { GITHUB_URL, LINKEDIN_URL, MAIL_URL } from "@constants";
         Based in Brazil, working globally. Open to full-time and freelance work.
       </p>
     </div>
-  </div>
-  <div class="text-content-secondary">
-    <p class="font-caveat text-xl">
-      On most days, you’ll find me with some
-      <TextLink
-        link={{
-          label: "pão de queijo",
-          url: "https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo",
-        }}
-        size="medium"
-        cursive
+    <div class="flex flex-row gap-6 items-center pt-4">
+      <ButtonLink icon="github" label="GitHub" href={GITHUB_URL} external />
+      <ButtonLink
+        icon="linkedin"
+        label="LinkedIn"
+        href={LINKEDIN_URL}
+        external
       />
-      and a cup of black coffee. No sugar. This one is for you:
-    </p>
+      <ButtonLink icon="mail" label="Contact" href={MAIL_URL} external />
+    </div>
   </div>
-  <div class="flex flex-row gap-5 items-center">
-    <ButtonLink icon="github" label="GitHub" href={GITHUB_URL} external />
-    <ButtonLink icon="linkedin" label="LinkedIn" href={LINKEDIN_URL} external />
-    <ButtonLink icon="mail" label="Contact" href={MAIL_URL} external />
+  <div class="absolute right-32 w-[480px] h-[560px]">
+    <div class="flex flex-col gap-4 justiy-center text-center">
+      <div
+        class="border-2 border-white shadow-[3px_3px_0_0_#AE1E5F] rounded-xl overflow-hidden"
+      >
+        <Image
+          src={luccaImage}
+          alt="Lucca Romaniello"
+          class="object-contain object-center -mt-32"
+        />
+      </div>
+      <div class="text-content-secondary">
+        <p class="font-caveat text-2xl">
+          On most days, you’ll find me with some
+          <TextLink
+            link={{
+              label: "pão de queijo",
+              url: "https://en.wikipedia.org/wiki/P%C3%A3o_de_queijo",
+            }}
+            size="large"
+            cursive
+          />
+          and a cup of coffee. No sugar.
+        </p>
+      </div>
+    </div>
   </div>
 </div>
-
-<style>
-  img.background {
-    background-image: url("../assets/bg.jpg");
-  }
-</style>

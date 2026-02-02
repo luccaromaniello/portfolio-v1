@@ -1,7 +1,12 @@
 ---
 import { Hero, Projects, Experience, Education, Footer } from "@modules";
 import { BaseHead } from "@components";
-import { SITE_DESCRIPTION, SITE_TITLE, baseLayout } from "@constants";
+import {
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+  baseLayout,
+  baseSpacing,
+} from "@constants";
 ---
 
 <!doctype html>
@@ -10,12 +15,14 @@ import { SITE_DESCRIPTION, SITE_TITLE, baseLayout } from "@constants";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="font-satoshi">
-    <main class={baseLayout}>
+    <main>
       <Hero />
-      <Projects />
-      <Experience />
-      <Education />
+      <div class={baseLayout}>
+        <Projects />
+        <Experience />
+        <Education />
+      </div>
     </main>
-    <Footer class={baseLayout} />
+    <Footer class={baseSpacing} />
   </body>
 </html>
