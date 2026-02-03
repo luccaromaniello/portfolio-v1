@@ -1,15 +1,23 @@
 ---
 interface Props {
   label: string;
+  variant?: "primary" | "neutral";
 }
 
-const { label } = Astro.props;
+const { label, variant = "primary" } = Astro.props;
+
+const variantClasses = {
+  primary:
+    "bg-primary-light/3 text-primary shadow-[0_1px_0_0_rgba(174,30,95,0.15)]",
+  neutral: "bg-white text-neutral-primary border border-neutral-primary/10",
+};
 ---
 
 <span
-  class="md:w-auto inline-block py-1 px-3 rounded-full
-      text-xs text-center font-light tracking-wide bg-primary-light/3 text-primary
-      shadow-[0_1px_0_0_rgba(174,30,95,0.15)]"
+  class:list={[
+    "md:w-auto inline-block py-1 px-3 rounded-full text-xs text-center tracking-wide",
+    variantClasses[variant],
+  ]}
 >
   {label}
 </span>

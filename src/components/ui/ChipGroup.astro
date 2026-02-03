@@ -3,11 +3,12 @@ import Chip from "@components/ui/Chip.astro";
 
 interface Props {
   chips: string[];
+  variant?: "primary" | "neutral";
 }
 
-const { chips } = Astro.props;
+const { chips, variant = "primary" } = Astro.props;
 ---
 
 <div class="flex flex-row flex-wrap items-start gap-2 py-2 text-white">
-  {chips.map((chip) => <Chip label={chip} />)}
+  {chips.map((chip) => <Chip label={chip} variant={variant} />)}
 </div>
