@@ -60,7 +60,7 @@ export const SOCIAL_ICONS = {
     alt: "Mail icon",
     icon: MailIcon,
     link: {
-      label: "External link",
+      label: "Email",
       url: MAIL_URL,
     } as Link,
   },
