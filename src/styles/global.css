@@ -3,7 +3,8 @@
 :root {
   --neutral-primary: hsl(60, 0%, 0%);
   --neutral-white: hsl(0, 0%, 98.04%);
-  --neutral-secondary: hsl(0, 0%, 55%);
+  --neutral-secondary: hsl(0, 0%, 44%);
+  --neutral-tertiary: hsl(0, 0%, 55%);
   --primary: hsl(332, 70%, 40%);
   --primary-light: hsl(332, 70%, 60%);
 }
@@ -34,6 +35,7 @@
   --background: var(--neutral-white);
   --color-neutral-primary: var(--neutral-primary);
   --color-content-secondary: var(--neutral-secondary);
+  --color-content-tertiary: var(--neutral-tertiary);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
 }
