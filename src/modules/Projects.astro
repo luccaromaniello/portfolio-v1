@@ -3,7 +3,10 @@ import Section from "@components/content/Section.astro";
 import ProjectCard from "@components/projects/ProjectCard.astro";
 import { YZZO_LIVE_URL, YZZO_REPO_URL, NYX_REPO_URL } from "@constants";
 import yzzoImage from "@assets/projects/yzzo-overview.png";
-import nyxImage from "@assets/projects/nyx-dark.png";
+import nyxImage1 from "@assets/projects/nyx-1.png";
+import nyxImage2 from "@assets/projects/nyx-2.png";
+import nyxImage3 from "@assets/projects/nyx-3.png";
+import nyxImage4 from "@assets/projects/nyx-4.png";
 ---
 
 <Section heading="Selected work">
@@ -13,19 +16,35 @@ import nyxImage from "@assets/projects/nyx-dark.png";
       description="A clipboard manager built for simplicity and productivity."
       website={{ href: YZZO_LIVE_URL, external: true, track: true }}
       repository={YZZO_REPO_URL}
-      image={{
-        src: yzzoImage,
-        alt: "An overview of YZZO's clipboard manager.",
-      }}
+      images={[
+        {
+          src: yzzoImage,
+          alt: "An overview of YZZO's clipboard manager.",
+        },
+      ]}
     />
     <ProjectCard
       title="Nyx"
       description="A theme for Zed code editor."
       repository={NYX_REPO_URL}
-      image={{
-        src: nyxImage,
-        alt: "An overview of Nyx theme.",
-      }}
+      images={[
+        {
+          src: nyxImage1,
+          alt: "An overview of Nyx theme.",
+        },
+        {
+          src: nyxImage2,
+          alt: "An overview of Nyx theme.",
+        },
+        {
+          src: nyxImage3,
+          alt: "An overview of Nyx theme.",
+        },
+        {
+          src: nyxImage4,
+          alt: "An overview of Nyx theme.",
+        },
+      ]}
     />
     <p class="text-lg text-center font-medium text-content-secondary">
       🚧 More projects coming soon!

@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import IconButton from "@components/ui/IconButton.astro";
 import { ButtonLink } from "@components/ui";
+import ArrowLeft from "@assets/icons/arrow-left.svg";
+import ArrowRight from "@assets/icons/arrow-right.svg";
 
 interface Props {
   title: string;
@@ -12,14 +14,15 @@ interface Props {
     track?: boolean;
   };
   repository?: string;
-  image: {
+  images: {
     src: ImageMetadata;
     alt: string;
-  };
+  }[];
   even?: boolean;
 }
 
-const { title, description, website, repository, image } = Astro.props;
+const { title, description, website, repository, images } = Astro.props;
+const hasCarousel = images.length > 1;
 ---
 
 <div
@@ -66,22 +69,71 @@ const { title, description, website, repository, image } = Astro.props;
       </div>
     </div>
 
-    <div class="xl:hidden overflow-hidden rounded-xl group">
-      <div class="transition-transform duration-500 group-hover:scale-105">
-        {image && <Image src={image.src} alt={image.alt} />}
+    <div class="relative overflow-hidden max-h-[720px]" data-carousel>
+      <div
+        class="flex transition-transform duration-300 ease-in-out h-full"
+        data-carousel-track
+      >
+        {
+          images.map((img) => (
+            <div class="w-full flex-shrink-0">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                class="h-full w-full object-cover"
+              />
+            </div>
+          ))
+        }
       </div>
-    </div>
-
-    <div class="hidden xl:block overflow-hidden h-full">
       {
-        image && (
-          <Image
-            src={image.src}
-            alt={image.alt}
-            class="h-full w-full object-cover"
-          />
+        hasCarousel && (
+          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+            <button
+              data-carousel-prev
+              class="w-10 h-10 flex items-center justify-center border-2 border-white text-white rounded-full font-semibold cursor-pointer hover:bg-white hover:text-black transition-colors"
+              aria-label="Previous image"
+            >
+              <ArrowLeft class="w-5 h-5" />
+            </button>
+            <button
+              data-carousel-next
+              class="w-10 h-10 flex items-center justify-center border-2 border-white text-white rounded-full font-semibold cursor-pointer hover:bg-white hover:text-black transition-colors"
+              aria-label="Next image"
+            >
+              <ArrowRight class="w-5 h-5" />
+            </button>
+          </div>
         )
       }
     </div>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector(
+      "[data-carousel-track]",
+    ) as HTMLElement;
+    const prev = carousel.querySelector("[data-carousel-prev]");
+    const next = carousel.querySelector("[data-carousel-next]");
+    if (!track) return;
+
+    const slides = track.children.length;
+    let current = 0;
+
+    function update() {
+      track!.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    prev?.addEventListener("click", () => {
+      current = (current - 1 + slides) % slides;
+      update();
+    });
+
+    next?.addEventListener("click", () => {
+      current = (current + 1) % slides;
+      update();
+    });
+  });
+</script>
