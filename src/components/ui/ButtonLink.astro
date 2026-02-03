@@ -8,6 +8,7 @@ interface Props {
   external?: boolean;
   theme?: "dark" | "light";
   track?: boolean;
+  copyToClipboard?: string;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   external = true,
   theme = "light",
   track = false,
+  copyToClipboard,
 } = Astro.props;
 const IconComponent = icon ? SOCIAL_ICONS[icon].icon : null;
 
@@ -24,18 +26,60 @@ const themeClasses = {
   dark: "border-white text-white hover:bg-white hover:text-black",
   light: "border-black text-black hover:bg-black hover:text-white",
 };
+
+const sharedClasses = [
+  "w-full md:w-auto inline-flex flex-row items-center gap-2 py-3 px-4 md:py-2 border-2 rounded-sm shadow-[3px_3px_0_0_#AE1E5F] text-sm text-center uppercase font-semibold cursor-pointer",
+  themeClasses[theme],
+];
 ---
 
-<a
-  href={href}
-  aria-label={label}
-  rel={track ? undefined : "noopener noreferrer"}
-  target={external ? "_blank" : "_self"}
-  class:list={[
-    "w-full md:w-auto inline-flex flex-row items-center gap-2 py-3 px-4 md:py-2 border-2 rounded-sm shadow-[3px_3px_0_0_#AE1E5F] text-sm text-center uppercase font-semibold cursor-pointer",
-    themeClasses[theme],
-  ]}
->
-  {IconComponent && <IconComponent class="w-4 h-4" />}
-  {label}
-</a>
+{
+  copyToClipboard ? (
+    <button
+      data-copy={copyToClipboard}
+      aria-label={label}
+      class:list={["copy-btn", ...sharedClasses]}
+    >
+      {IconComponent && <IconComponent class="w-4 h-4" />}
+      <span data-copy-label>{label}</span>
+    </button>
+  ) : (
+    <a
+      href={href}
+      aria-label={label}
+      rel={track ? undefined : "noopener noreferrer"}
+      target={external ? "_blank" : "_self"}
+      class:list={sharedClasses}
+    >
+      {IconComponent && <IconComponent class="w-4 h-4" />}
+      {label}
+    </a>
+  )
+}
+
+<script>
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    let timeout: ReturnType<typeof setTimeout> | null = null;
+
+    btn.addEventListener("click", () => {
+      const value = btn.getAttribute("data-copy");
+      const label = btn.querySelector("[data-copy-label]") as HTMLElement;
+      if (!value || !label) return;
+
+      const original =
+        btn.getAttribute("data-original-label") ?? label.innerText;
+      if (!btn.getAttribute("data-original-label")) {
+        btn.setAttribute("data-original-label", label.innerText);
+      }
+
+      navigator.clipboard.writeText(value);
+
+      if (timeout) clearTimeout(timeout);
+      label.innerText = "Copied email to clipboard!";
+      timeout = setTimeout(() => {
+        label.innerText = original;
+        timeout = null;
+      }, 1500);
+    });
+  });
+</script>
