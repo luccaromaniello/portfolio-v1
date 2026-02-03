@@ -81,8 +81,10 @@ const { class: className = "" } = Astro.props;
       class="w-24 h-24 rounded-full shadow-[1px_1px_0_0_#AE1E5F]"
     />
     <div class="flex flex-col">
-      <p class="text-base text-center xl:text-start text-neutral-primary">
-        If you have something in mind, feel free to reach out to me.
+      <p
+        class="text-base text-center xl:text-start text-neutral-primary font-medium"
+      >
+        Have something in mind? Say hello.
       </p>
       <div class="self-center xl:self-start">
         <TextLink link={{ label: MAIL_URL, url: MAIL_URL }} size="large" />
@@ -109,7 +111,7 @@ const { class: className = "" } = Astro.props;
                 size="extraSmall"
                 track
               />
-              <span class="text-content-secondary">
+              <span class="text-content-secondary font-medium">
                 {" "}
                 · {credit.contribution}
               </span>
