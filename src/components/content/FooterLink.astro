@@ -15,7 +15,7 @@ const { title, links } = Astro.props;
     {
       links.map((link) => (
         <li>
-          <TextLink link={link} size="small" />
+          <TextLink link={link} size="small" track={link.track} />
         </li>
       ))
     }

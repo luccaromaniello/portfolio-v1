@@ -21,7 +21,15 @@ export const PROJECT_ODIN_LIVE_URL = "/theodinproject/";
 export const PROJECT_ODIN_REPO_URL =
   "https://github.com/luccaromaniello/theodinproject";
 
+export const YZZO_LIVE_URL = "https://yzzo.app";
+export const YZZO_REPO_URL = "https://github.com/yzzoapps/yzzo";
+export const NYX_REPO_URL = "https://github.com/luccaromaniello/nyx";
+
 export const PROJECT_PORTFOLIO_V0_URL = "https://www.v0.luccaromaniello.com";
+
+export const CREDIT_ALEX_URL = "https://www.instagram.com/clicksdoalex";
+export const CREDIT_LOR_URL = "https://www.lorranebernardes.com/";
+export const CREDIT_MOONLOIN_URL = "https://www.behance.net/moonloin";
 
 export const SOCIAL_ICONS = {
   externalLink: {
