@@ -2,8 +2,11 @@
 const { title } = Astro.props;
 ---
 
-<h3
-  class="text-md md:text-2xl font-light text-content-secondary tracking-wide uppercase pb-3 md:pb-12"
->
-  {title}
-</h3>
+<div class="w-full pb-3 md:pb-8">
+  <h3
+    class="text-md md:text-3xl font-light text-neutral-primary tracking-wide uppercase pb-4"
+  >
+    {title}
+  </h3>
+  <hr class="border-content-tertiary/30" />
+</div>
