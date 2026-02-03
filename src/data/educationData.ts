@@ -35,7 +35,7 @@ export const educationHistory = [
     startDate: "2025",
     endDate: "2026",
     location: "Remote",
-    current: false,
+    current: true,
     technologies: [
       "Entrepreneurship",
       "Decision making",

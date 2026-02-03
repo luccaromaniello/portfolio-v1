@@ -5,40 +5,44 @@ import { type ExperienceItem } from "@typeDefs/experience";
 
 interface Props {
   experience: ExperienceItem;
+  first?: boolean;
+  last?: boolean;
 }
 
-const { experience } = Astro.props;
+const { experience, first = false, last = false } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-1 xl:grid-cols-[1fr_minmax(20%,144px)] 2xl:grid-cols-[minmax(0,1024px)_minmax(20%,196px)] py-4 gap-4 xl:gap-14 2xl:gap-18 text-neutral-primary"
+  class="grid grid-cols-1 xl:grid-cols-[1fr_auto_minmax(20%,196px)] gap-4 xl:gap-0 text-neutral-primary"
 >
-  <div class="flex flex-col">
-    <div class="flex flex-wrap items-baseline">
-      <span class="font-semibold text-xl md:text-3xl lg:text-base uppercase"
-        >{experience.title}{
+  <div class="xl:pr-12 xl:py-4">
+    <div
+      class="flex flex-col gap-2 border-2 border-neutral-primary rounded-lg bg-white p-6"
+    >
+      <div class="flex flex-wrap items-baseline">
+        <span class="font-bold text-xl md:text-2xl"
+          >{experience.title}{
+            experience.companies && experience.companies.length > 0 && (
+              <>&nbsp;·&nbsp;</>
+            )
+          }
+        </span>
+        {
           experience.companies && experience.companies.length > 0 && (
-            <>&nbsp;·&nbsp;</>
+            <>
+              {experience.companies.map((company, i) => (
+                <>
+                  <TextLink
+                    link={{ label: company.name, url: company.website ?? "" }}
+                    size="small"
+                  />
+                  {i < experience.companies.length - 1 && <span>,&nbsp;</span>}
+                </>
+              ))}
+            </>
           )
         }
-      </span>
-      {
-        experience.companies && experience.companies.length > 0 && (
-          <>
-            {experience.companies.map((company, i) => (
-              <>
-                <TextLink
-                  link={{ label: company.name, url: company.website ?? "" }}
-                  size="small"
-                />
-                {i < experience.companies.length - 1 && <span>,&nbsp;</span>}
-              </>
-            ))}
-          </>
-        )
-      }
-    </div>
-    <div class="flex flex-col gap-1">
+      </div>
       {
         experience.description && (
           <p class="text-content-secondary text-pretty">
@@ -49,19 +53,50 @@ const { experience } = Astro.props;
       <ChipGroup chips={experience.technologies} />
     </div>
   </div>
+  <div class="relative hidden xl:flex flex-col items-center">
+    <div
+      class:list={[
+        "w-px flex-1",
+        first ? "bg-transparent" : "bg-neutral-primary/20",
+      ]}
+    >
+    </div>
+    <div
+      class:list={[
+        "w-2.5 h-2.5 rounded-full shrink-0 z-10",
+        experience.current
+          ? "bg-primary"
+          : "border border-neutral-primary/30 bg-white",
+      ]}
+    >
+    </div>
+    <div
+      class:list={[
+        "w-px flex-1",
+        last ? "bg-transparent" : "bg-neutral-primary/20",
+      ]}
+    >
+    </div>
+  </div>
   <div
-    class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-end pt-1"
+    class="flex flex-row xl:flex-col justify-between xl:justify-center uppercase text-center xl:text-start xl:py-8 xl:pl-6"
   >
-    <p class="text-sm md:text-sm">
+    <p class="text-sm md:text-base">
       {experience.location}
     </p>
-    <p class="text-content-secondary text-sm md:text-sm leading-relaxed">
+    <p
+      class="text-content-secondary
+      text-sm
+      md:text-base
+      leading-relaxed
+      font-caveat"
+    >
       {experience.startDate}
       {
         experience.current ? (
           <>
             {" - "}
-            <span class="text-primary font-semibold">now</span>
+            <span class="text-primary font-semibold animate-pulse">now</span>
           </>
         ) : (
           experience.endDate &&

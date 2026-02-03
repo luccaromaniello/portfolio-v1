@@ -5,9 +5,15 @@ import { educationHistory } from "@data/educationData";
 ---
 
 <Section heading="Education">
-  {
-    educationHistory.map((experience) => (
-      <ExperienceItem experience={experience} />
-    ))
-  }
+  <div class="flex flex-col">
+    {
+      educationHistory.map((experience, i) => (
+        <ExperienceItem
+          experience={experience}
+          first={i === 0}
+          last={i === educationHistory.length - 1}
+        />
+      ))
+    }
+  </div>
 </Section>
