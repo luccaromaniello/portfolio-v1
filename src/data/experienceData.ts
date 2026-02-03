@@ -5,7 +5,7 @@ export const workExperience = [
     current: true,
     location: "Remote",
     description:
-      "Building web applications for an independent financial advisory firm specializing in M&A, capital raising, and investment management. Developing tools to manage contracts and operational processes while contributing to design decisions, leveraging my product design background. Working across the full stack with React/Next.js and Laravel.",
+      "Full stack development for an independent financial advisory firm. Building internal tools for M&A contracts and operations with React/Next.js and Laravel.",
     technologies: [
       "React",
       "Next.js",
@@ -27,7 +27,7 @@ export const workExperience = [
     current: false,
     location: "Remote",
     description:
-      "Designed digital experiences across beverage, telecom, healthcare, and education industries, from startups to multinationals like AB InBev and major Brazilian companies like Ânima Educação. Led projects including AB InBev's developer portal redesign, SIM card flow optimization for fluke, doctor tools for Conexa Saúde, and a certificate platform serving 350K+ students at Ânima Educação.",
+      "Led the developer portal redesign for AB InBev, one of the world's largest breweries. Also shipped products in telecom, healthcare, and education: SIM card flows, doctor tools, and a certificate platform serving 350K+ students.",
     technologies: [
       "UI/UX design",
       "Design systems",
@@ -53,7 +53,7 @@ export const workExperience = [
     current: false,
     location: "Belo Horizonte, Brazil",
     description:
-      "Developed mobile and backend solutions for Localiza&Co, one of Latin America's largest car rental companies. Migrated a carport operator app from hybrid to native and contributed to dti's internal tools for visual management and merit-based recognition systems.",
+      "Mobile and backend development for Latin America's largest car rental company. Migrated apps from hybrid to native and built internal tools.",
     technologies: ["Vue.js", "Kotlin", "Flutter", "C#", "ASP.NET"],
     companies: [
       {

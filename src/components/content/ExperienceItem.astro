@@ -11,48 +11,21 @@ const { experience } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-1 xl:grid-cols-[1fr_minmax(20%,144px)] 2xl:grid-cols-[minmax(0,1024px)_minmax(20%,196px)] py-4 gap-14 2xl:gap-18"
+  class="grid grid-cols-1 xl:grid-cols-[1fr_minmax(20%,144px)] 2xl:grid-cols-[minmax(0,1024px)_minmax(20%,196px)] py-4 gap-4 xl:gap-14 2xl:gap-18 text-neutral-primary"
 >
-  <!-- <div
-  class="grid grid-cols-1 xl:grid-cols-[minmax(20%,144px)_1fr] 2xl:grid-cols-[minmax(20%,196px)_minmax(0,1024px)] py-4 gap-12"
-> -->
-  <!-- <div
-    class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-start pt-1"
-  >
-    <p class="text-sm md:text-sm font-light">
-      {experience.location}
-    </p>
-    <p class="text-content-secondary text-sm md:text-sm">
-      {experience.startDate}
-      {
-        experience.current ? (
-          <>
-            {" - "}
-            <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
-              now
-            </span>
-          </>
-        ) : (
-          experience.endDate &&
-          experience.endDate !== experience.startDate && (
-            <>
-              {" - "}
-              <span>{experience.endDate}</span>
-            </>
-          )
-        )
-      }
-    </p>
-  </div> -->
-  <div class={`flex flex-col ${experience.description && "gap-2"}`}>
+  <div class="flex flex-col">
     <div class="flex flex-wrap items-baseline">
-      <span class="font-medium text-xl md:text-3xl lg:text-base uppercase"
-        >{experience.title} ·&nbsp;
+      <span class="font-semibold text-xl md:text-3xl lg:text-base uppercase"
+        >{experience.title}{
+          experience.companies && experience.companies.length > 0 && (
+            <>&nbsp;·&nbsp;</>
+          )
+        }
       </span>
       {
         experience.companies && experience.companies.length > 0 && (
           <>
-            {experience.companies?.map((company, i) => (
+            {experience.companies.map((company, i) => (
               <>
                 <TextLink
                   link={{ label: company.name, url: company.website ?? "" }}
@@ -65,28 +38,30 @@ const { experience } = Astro.props;
         )
       }
     </div>
-    <div class="flex flex-col gap-2">
-      <p class="text-md font-light text-content-secondary text-pretty">
-        {experience.description}
-      </p>
+    <div class="flex flex-col gap-1">
+      {
+        experience.description && (
+          <p class="text-content-secondary text-pretty">
+            {experience.description}
+          </p>
+        )
+      }
       <ChipGroup chips={experience.technologies} />
     </div>
   </div>
   <div
     class="flex flex-row xl:flex-col justify-between xl:justify-start uppercase text-center xl:text-end pt-1"
   >
-    <p class="text-sm md:text-sm font-light">
+    <p class="text-sm md:text-sm">
       {experience.location}
     </p>
-    <p class="text-content-secondary text-sm md:text-sm">
+    <p class="text-content-secondary text-sm md:text-sm leading-relaxed">
       {experience.startDate}
       {
         experience.current ? (
           <>
             {" - "}
-            <span class="text-white font-medium text-shadow-[2px_1px_0_#AE1E5F]">
-              now
-            </span>
+            <span class="text-primary font-semibold">now</span>
           </>
         ) : (
           experience.endDate &&

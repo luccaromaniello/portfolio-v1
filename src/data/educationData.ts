@@ -2,19 +2,6 @@ export const educationHistory = [
   {
     companies: [
       {
-        name: "The Odin Project",
-        website: "https://www.theodinproject.com/",
-      },
-    ],
-    title: "The Odin Project",
-    startDate: "2025",
-    location: "Remote",
-    current: true,
-    technologies: ["React", "Node.js", "SQL", "JavaScript", "CSS", "HTML"],
-  },
-  {
-    companies: [
-      {
         name: "curso.dev",
         website: "https://curso.dev/",
       },
