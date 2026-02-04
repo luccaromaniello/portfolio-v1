@@ -17,10 +17,10 @@ const { experience, first = false, last = false } = Astro.props;
 >
   <div class="xl:pr-12 xl:py-4">
     <div
-      class="flex flex-col gap-2 border-2 border-neutral-primary rounded-lg bg-white p-6"
+      class="flex flex-col gap-2 border-2 border-neutral-primary rounded-lg bg-white p-4 md:p-6"
     >
       <div class="flex flex-wrap items-baseline">
-        <span class="font-bold text-xl"
+        <span class="font-bold text-lg md:text-xl"
           >{experience.title}{
             experience.companies && experience.companies.length > 0 && (
               <>&nbsp;·&nbsp;</>
@@ -79,7 +79,7 @@ const { experience, first = false, last = false } = Astro.props;
     </div>
   </div>
   <div
-    class="flex flex-row xl:flex-col justify-between xl:justify-center uppercase text-center xl:text-start xl:py-8 xl:pl-6"
+    class="order-first xl:order-none flex flex-row xl:flex-col justify-between xl:justify-center uppercase xl:text-start xl:py-8 xl:pl-6"
   >
     <p class="text-sm md:text-base">
       {experience.location}
