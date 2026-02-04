@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /*coffee-compressed*
 
 Sitemap: https://www.luccaromaniello.com/sitemap-index.xml
