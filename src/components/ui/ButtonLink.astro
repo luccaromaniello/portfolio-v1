@@ -75,7 +75,7 @@ const sharedClasses = [
       navigator.clipboard.writeText(value);
 
       if (timeout) clearTimeout(timeout);
-      label.innerText = "Copied email to clipboard!";
+      label.innerText = "Copied!";
       timeout = setTimeout(() => {
         label.innerText = original;
         timeout = null;

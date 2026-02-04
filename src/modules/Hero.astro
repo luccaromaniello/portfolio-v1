@@ -8,35 +8,35 @@ import { baseSpacing } from "@constants";
 ---
 
 <div
-  class={`${baseSpacing} text-white pt-12 md:pt-24 pb-12 md:pb-20 mb-24 md:mb-48 bg-neutral-primary overflow-visible`}
+  class={`${baseSpacing} text-white pt-12 md:pt-24 lg:pt-12 xl:pt-24 pb-12 md:pb-20 mb-24 md:mb-48 bg-neutral-primary overflow-visible`}
 >
   <div
     class="relative flex flex-col lg:flex-row gap-8 w-full justify-start mx-auto max-w-[1440px]"
   >
     <div
-      class="flex flex-col gap-8 md:gap-12 lg:gap-10 w-full pt-4 md:pt-10 pl-0 lg:pl-24"
+      class="flex flex-col gap-8 md:gap-12 lg:gap-10 w-full pt-4 md:pt-10 pl-0 xl:pl-24"
     >
       <h1
         data-text="Lucca Romaniello"
-        class="relative z-10 anaglyph text-5xl sm:text-6xl lg:text-8xl font-satoshi leading-tight font-bold
+        class="relative z-10 anaglyph text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-satoshi leading-tight font-bold
               text-white tracking-wider uppercase"
       >
         Lucca Romaniello
       </h1>
       <div
-        class="flex flex-col gap-3 leading-relaxed text-lg md:text-2xl max-w-[640px]"
+        class="flex flex-col gap-3 leading-relaxed text-lg md:text-2xl lg:text-xl lg:max-w-[480px] xl:max-w-[640px]"
       >
         <p class="text-balance text-content-tertiary">
           Full Stack Engineer with a product design background. 6+ years
           blending engineering and design.
         </p>
-        <p class="text-base text-content-tertiary">
+        <p class="text-base text-content-tertiary lg:text-balance">
           Based in Brazil, working globally. Open to full-time and freelance
           work.
         </p>
       </div>
       <div
-        class="flex flex-row flex-wrap justify-center lg:justify-start gap-5 md:gap-6 items-center pt-4"
+        class="flex flex-row flex-wrap justify-center lg:justify-start gap-4 md:gap-6 pt-4"
       >
         <ButtonLink
           icon="github"
@@ -62,7 +62,7 @@ import { baseSpacing } from "@constants";
       </div>
     </div>
     <div
-      class="relative lg:absolute md:right-20 lg:right-16 xl:right-72 2xl:right-24 w-full lg:w-[480px] h-[560px]"
+      class="relative lg:absolute md:right-20 lg:right-0 xl:right-72 2xl:right-24 w-full lg:w-[380px] xl:w-[480px] xl:h-[560px]"
     >
       <div class="flex flex-col gap-4 justify-center text-center">
         <div
@@ -73,7 +73,7 @@ import { baseSpacing } from "@constants";
           <Image
             src={luccaImage}
             alt="Lucca Romaniello"
-            class="object-contain object-center -mt-32 transition-opacity duration-150 will-change-[opacity]"
+            class="object-contain object-center xl:-mt-32 transition-opacity duration-150 will-change-[opacity]"
             id="hero-image"
           />
           <video
@@ -104,9 +104,14 @@ import { baseSpacing } from "@constants";
             and a cup of coffee. No sugar.
           </p>
           <p
-            class="hidden lg:block absolute font-caveat text-2xl bottom-56 -right-42 rotate-90 text-content-secondary"
+            class="hidden xl:block absolute font-caveat text-2xl lg:bottom-84 xl:bottom-56 -right-42 rotate-90 text-content-secondary"
           >
             Coffee's on me. Hover to grab yours.
+          </p>
+          <p
+            class="xl:hidden absolute font-caveat text-2xl lg:bottom-76 xl:bottom-52 -right-40 rotate-90 text-content-secondary"
+          >
+            Coffee's on me. Tap to grab yours.
           </p>
         </div>
       </div>
