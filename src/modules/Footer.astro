@@ -72,9 +72,9 @@ const { class: className = "" } = Astro.props;
 ---
 
 <footer
-  class={`grid grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-20 xl:gap-y-12 pt-26 pb-16 md:pb-12 xl:py-24 text-content-secondary justify-between items-start font-light ${className}`}
+  class={`grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 xl:gap-y-12 pt-26 pb-16 md:pb-12 xl:py-24 text-content-secondary justify-between items-start font-light ${className}`}
 >
-  <div class="flex flex-col gap-4 xl:gap-10 items-center xl:items-start">
+  <div class="flex flex-col gap-4 xl:gap-10 items-center lg:items-start">
     <Image
       src={luccaIcon}
       alt="Lucca's illustration"
@@ -82,7 +82,7 @@ const { class: className = "" } = Astro.props;
     />
     <div class="flex flex-col">
       <p
-        class="text-base text-center xl:text-start text-neutral-primary font-medium"
+        class="text-base text-center lg:text-start text-neutral-primary font-medium"
       >
         Have something in mind? Say hello.
       </p>
@@ -94,9 +94,9 @@ const { class: className = "" } = Astro.props;
       <p>&copy 2026 Designed and coded by Lucca Romaniello.</p>
     </div>
   </div>
-  <div class="flex flex-col gap-10">
+  <div class="flex flex-col gap-16 lg:gap-10 md:text-center lg:text-start">
     <div class="flex flex-col gap-1">
-      <p class="font-caveat text-start text-neutral-primary">
+      <p class="font-caveat text-neutral-primary">
         Behind some pieces of this site, there are people I'd happily buy
         another coffee.
       </p>
@@ -121,7 +121,7 @@ const { class: className = "" } = Astro.props;
       </div>
     </div>
     <div
-      class="flex flex-col md:flex-row w-full justify-between md:justify-start xl:justify-start gap-6 md:gap-12 xl:gap-12"
+      class="flex flex-col md:flex-row w-full justify-between md:justify-center lg:justify-start gap-6 md:gap-16 xl:gap-12"
     >
       <FooterLink title="Work" links={workLinks} />
       <FooterLink title="Time Machine" links={timeMachineLinks} />
