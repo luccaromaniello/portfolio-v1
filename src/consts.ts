@@ -14,13 +14,6 @@ export const MAIL_URL = "contact@luccaromaniello.com";
 export const WEBSITE_URL = "https://www.luccaromaniello.com";
 
 // projects
-export const PROJECT_ODIN_SITE_TITLE = "Lucca Romaniello — The Odin Project";
-export const PROJECT_ODIN_SITE_DESCRIPTION =
-  "Full Stack Engineer Lucca Romaniello presents a collection of 27 full-stack web development challenges completed during The Odin Project curriculum, showcasing practical skills and coding solutions.";
-export const PROJECT_ODIN_LIVE_URL = "/theodinproject/";
-export const PROJECT_ODIN_REPO_URL =
-  "https://github.com/luccaromaniello/theodinproject";
-
 export const YZZO_LIVE_URL = "https://yzzo.app";
 export const YZZO_REPO_URL = "https://github.com/yzzoapps/yzzo";
 export const NYX_REPO_URL = "https://github.com/luccaromaniello/nyx";
