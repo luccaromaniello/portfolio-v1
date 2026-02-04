@@ -55,26 +55,15 @@ const { experience, first = false, last = false } = Astro.props;
   </div>
   <div class="relative hidden xl:flex flex-col items-center">
     <div
-      class:list={[
-        "w-px flex-1",
-        first ? "bg-transparent" : "bg-neutral-primary/20",
-      ]}
+      class={`w-px flex-1 ${first ? "bg-transparent" : "bg-neutral-primary/20"}`}
     >
     </div>
     <div
-      class:list={[
-        "w-2.5 h-2.5 rounded-full shrink-0 z-10",
-        experience.current
-          ? "bg-primary"
-          : "border border-neutral-primary/30 bg-white",
-      ]}
+      class={`w-2.5 h-2.5 rounded-full shrink-0 z-10 ${experience.current ? "bg-primary" : "border border-neutral-primary/30 bg-white"}`}
     >
     </div>
     <div
-      class:list={[
-        "w-px flex-1",
-        last ? "bg-transparent" : "bg-neutral-primary/20",
-      ]}
+      class={`w-px flex-1 ${last ? "bg-transparent" : "bg-neutral-primary/20"}`}
     >
     </div>
   </div>
