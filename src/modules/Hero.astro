@@ -8,20 +8,24 @@ import { baseSpacing } from "@constants";
 ---
 
 <div
-  class={`${baseSpacing} text-white pt-24 pb-20 mb-48 bg-neutral-primary overflow-visible`}
+  class={`${baseSpacing} text-white pt-12 md:pt-24 pb-12 md:pb-20 mb-24 md:mb-48 bg-neutral-primary overflow-visible`}
 >
   <div
-    class="relative flex flex-row gap-8 w-full justify-start mx-auto max-w-[1440px]"
+    class="relative flex flex-col lg:flex-row gap-8 w-full justify-start mx-auto max-w-[1440px]"
   >
-    <div class="flex flex-col gap-12 lg:gap-10 w-full pt-10 pl-24">
+    <div
+      class="flex flex-col gap-8 md:gap-12 lg:gap-10 w-full pt-4 md:pt-10 pl-0 lg:pl-24"
+    >
       <h1
         data-text="Lucca Romaniello"
-        class="relative z-10 anaglyph text-8xl font-satoshi leading-tight font-bold
+        class="relative z-10 anaglyph text-5xl sm:text-6xl lg:text-8xl font-satoshi leading-tight font-bold
               text-white tracking-wider uppercase"
       >
         Lucca Romaniello
       </h1>
-      <div class="flex flex-col gap-3 leading-relaxed text-2xl max-w-[640px]">
+      <div
+        class="flex flex-col gap-3 leading-relaxed text-lg md:text-2xl max-w-[640px]"
+      >
         <p class="text-balance text-content-tertiary">
           Full Stack Engineer with a product design background. 6+ years
           blending engineering and design.
@@ -31,7 +35,9 @@ import { baseSpacing } from "@constants";
           work.
         </p>
       </div>
-      <div class="flex flex-row gap-6 items-center pt-4">
+      <div
+        class="flex flex-row flex-wrap justify-center lg:justify-start gap-5 md:gap-6 items-center pt-4"
+      >
         <ButtonLink
           icon="github"
           label="GitHub"
@@ -56,7 +62,7 @@ import { baseSpacing } from "@constants";
       </div>
     </div>
     <div
-      class="absolute right-8 md:right-20 lg:right-16 xl:right-72 2xl:right-24 w-[480px] h-[560px]"
+      class="relative lg:absolute md:right-20 lg:right-16 xl:right-72 2xl:right-24 w-full lg:w-[480px] h-[560px]"
     >
       <div class="flex flex-col gap-4 justify-center text-center">
         <div
@@ -84,7 +90,7 @@ import { baseSpacing } from "@constants";
             This one's for you. Sugar?
           </p>
         </div>
-        <div class="text-neutral-primary/90">
+        <div class="text-white lg:text-neutral-primary/90">
           <p class="font-caveat text-2xl">
             On most days, you’ll find me with some
             <TextLink
@@ -98,13 +104,18 @@ import { baseSpacing } from "@constants";
             and a cup of coffee. No sugar.
           </p>
           <p
-            class="absolute font-caveat text-2xl bottom-56 -right-42 rotate-90 text-content-secondary"
+            class="hidden lg:block absolute font-caveat text-2xl bottom-56 -right-42 rotate-90 text-content-secondary"
           >
             Coffee's on me. Hover to grab yours.
           </p>
         </div>
       </div>
     </div>
+    <p
+      class="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/6 rotate-90 origin-center whitespace-nowrap font-caveat text-2xl text-content-secondary"
+    >
+      Coffee's on me. Tap to grab yours.
+    </p>
   </div>
 </div>
 
