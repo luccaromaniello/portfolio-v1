@@ -135,22 +135,32 @@ import { baseSpacing } from "@constants";
   ) as HTMLParagraphElement;
 
   let playing = false;
+  let playPromise: Promise<void> | null = null;
 
   function showVideo() {
     image.style.opacity = "0";
     video.style.opacity = "1";
     text.style.opacity = "1";
     video.currentTime = 0;
-    video.play();
+    playPromise = video.play();
     playing = true;
   }
 
   function hideVideo() {
-    image.style.opacity = "1";
-    video.style.opacity = "0";
-    text.style.opacity = "0";
-    video.pause();
-    playing = false;
+    const hide = () => {
+      image.style.opacity = "1";
+      video.style.opacity = "0";
+      text.style.opacity = "0";
+      video.pause();
+      playing = false;
+      playPromise = null;
+    };
+
+    if (playPromise) {
+      playPromise.then(hide).catch(() => {});
+    } else {
+      hide();
+    }
   }
 
   container?.addEventListener("mouseenter", showVideo);
