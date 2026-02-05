@@ -14,11 +14,11 @@ import { baseSpacing } from "@constants";
     class="relative flex flex-col lg:flex-row gap-8 w-full justify-start mx-auto max-w-[1440px]"
   >
     <div
-      class="flex flex-col gap-4 md:gap-12 lg:gap-10 w-full pt-4 md:pt-10 pl-0 xl:pl-24"
+      class="flex flex-col gap-4 lg:gap-10 w-full pt-4 md:pt-10 pl-0 xl:pl-24"
     >
       <h1
         data-text="Lucca Romaniello"
-        class="relative z-10 anaglyph text-start text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-satoshi leading-tight font-bold
+        class="relative z-10 anaglyph text-start text-4xl sm:text-7xl xl:text-8xl font-satoshi leading-tight font-bold
               text-white tracking-wider uppercase"
       >
         Lucca Romaniello
@@ -30,13 +30,13 @@ import { baseSpacing } from "@constants";
           Full Stack Engineer with a product design background. 6+ years
           blending engineering and design.
         </p>
-        <p class="text-sm lg:text-base text-content-tertiary lg:text-balance">
+        <p class="text-sm md:text-lg text-content-tertiary lg:text-balance">
           Based in Brazil, working globally. Open to full-time and freelance
           work.
         </p>
       </div>
       <div
-        class="grid grid-cols-2 md:grid-cols-3 w-full lg:w-fit gap-4 md:gap-6 pt-4"
+        class="grid grid-cols-2 md:grid-cols-3 w-full md:w-fit gap-4 md:gap-6 pt-4 mb-0 md:mb-4 lg:mb-0"
       >
         <ButtonLink
           icon="github"
@@ -64,11 +64,11 @@ import { baseSpacing } from "@constants";
       </div>
     </div>
     <div
-      class="relative lg:absolute md:right-20 lg:right-0 xl:right-72 2xl:right-24 w-full lg:w-[380px] xl:w-[480px] xl:h-[560px]"
+      class="relative lg:absolute lg:right-0 xl:right-72 2xl:right-24 w-full lg:w-[380px] xl:w-[480px] xl:h-[560px]"
     >
       <div class="flex flex-col gap-3 md:gap-3 justify-center text-center">
         <p
-          class="lg:hidden font-caveat text-xl text-content-secondary text-center mt-4"
+          class="md:hidden font-caveat text-xl text-content-secondary text-center mt-4"
         >
           Coffee's on me. Tap to grab yours.
         </p>
@@ -80,7 +80,7 @@ import { baseSpacing } from "@constants";
           <Image
             src={luccaImage}
             alt="Lucca Romaniello"
-            class="object-contain object-center xl:-mt-32 transition-opacity duration-150 will-change-[opacity]"
+            class="object-contain object-center md:-mt-56 lg:-mt-0 xl:-mt-32 transition-opacity duration-150 will-change-[opacity]"
             id="hero-image"
           />
           <video
@@ -92,13 +92,13 @@ import { baseSpacing } from "@constants";
             id="hero-video"></video>
           <p
             id="hero-video-text"
-            class="absolute bottom-4 left-0 right-0 text-center font-caveat text-2xl text-white opacity-0 transition-opacity duration-150 will-change-[opacity] z-10"
+            class="absolute bottom-4 left-0 right-0 text-center font-caveat text-3xl lg:text-2xl text-white opacity-0 transition-opacity duration-150 will-change-[opacity] z-10"
           >
             This one's for you. Sugar?
           </p>
         </div>
         <div class="text-white lg:text-neutral-primary/90">
-          <p class="font-caveat text-xl lg:text-2xl">
+          <p class="font-caveat text-xl md:text-2xl lg:text-2xl">
             On most days, you’ll find me with some
             <TextLink
               link={{
@@ -116,7 +116,7 @@ import { baseSpacing } from "@constants";
             Coffee's on me. Hover to grab yours.
           </p>
           <p
-            class="hidden md:block xl:hidden absolute font-caveat text-xl md:bottom-74 right-0 md:-right-34 md:rotate-90 text-content-secondary"
+            class="hidden md:block xl:hidden absolute font-caveat text-xl lg:text-xl md:bottom-58 lg:bottom-74 right-0 md:-right-34 md:rotate-90 text-content-secondary"
           >
             Coffee's on me. Tap to grab yours.
           </p>
