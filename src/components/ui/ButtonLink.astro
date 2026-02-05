@@ -70,6 +70,7 @@ const sharedClasses = [
         btn.getAttribute("data-original-label") ?? label.innerText;
       if (!btn.getAttribute("data-original-label")) {
         btn.setAttribute("data-original-label", label.innerText);
+        label.style.minWidth = `${label.offsetWidth}px`;
       }
 
       navigator.clipboard.writeText(value);
