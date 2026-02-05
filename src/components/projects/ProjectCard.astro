@@ -12,8 +12,10 @@ interface Props {
     href: string;
     external?: boolean;
     track?: boolean;
+    trackEvent?: string;
   };
   repository?: string;
+  repositoryTrackEvent?: string;
   images: {
     src: ImageMetadata;
     alt: string;
@@ -21,7 +23,14 @@ interface Props {
   even?: boolean;
 }
 
-const { title, description, website, repository, images } = Astro.props;
+const {
+  title,
+  description,
+  website,
+  repository,
+  repositoryTrackEvent,
+  images,
+} = Astro.props;
 const hasCarousel = images.length > 1;
 ---
 
@@ -55,6 +64,7 @@ const hasCarousel = images.length > 1;
               href={website.href}
               external={website.external}
               track={website.track}
+              trackEvent={website.trackEvent}
             />
           )
         }
@@ -65,6 +75,7 @@ const hasCarousel = images.length > 1;
               label="View repository"
               href={repository}
               external
+              trackEvent={repositoryTrackEvent}
             />
           )
         }

@@ -20,11 +20,13 @@ const workLinks = [
     label: "YZZO",
     url: YZZO_LIVE_URL,
     track: true,
+    trackEvent: "yzzo-link-footer",
   },
   {
     label: "Nyx",
     url: NYX_REPO_URL,
     track: true,
+    trackEvent: "nyx-link-footer",
   },
 ];
 
@@ -32,14 +34,17 @@ const contactLinks = [
   {
     label: "GitHub",
     url: GITHUB_URL,
+    trackEvent: "github-link-footer",
   },
   {
     label: "LinkedIn",
     url: LINKEDIN_URL,
+    trackEvent: "linkedin-link-footer",
   },
   {
     label: "Email",
     url: MAIL_URL,
+    trackEvent: "email-link-footer",
   },
 ];
 
@@ -47,6 +52,7 @@ const timeMachineLinks = [
   {
     label: "Version 0",
     url: PROJECT_PORTFOLIO_V0_URL,
+    trackEvent: "portfolio-v0-link-footer",
   },
 ];
 
@@ -55,16 +61,19 @@ const credits = [
     name: "Alexandre Homem",
     contribution: "Made me look good on camera",
     url: CREDIT_ALEX_URL,
+    trackEvent: "credit-alex-link-footer",
   },
   {
     name: "Lor",
     contribution: "Created YZZO's brand",
     url: CREDIT_LOR_URL,
+    trackEvent: "credit-lor-link-footer",
   },
   {
     name: "Thais Bruna",
     contribution: "Created my brand illustration",
     url: CREDIT_MOONLOIN_URL,
+    trackEvent: "credit-thais-link-footer",
   },
 ];
 
@@ -88,7 +97,14 @@ const { class: className = "" } = Astro.props;
         Have something in mind? Say hello.
       </p>
       <div class="self-center xl:self-start">
-        <TextLink link={{ label: MAIL_URL, url: MAIL_URL }} size="large" />
+        <TextLink
+          link={{
+            label: MAIL_URL,
+            url: MAIL_URL,
+            trackEvent: "contact-btn-footer",
+          }}
+          size="large"
+        />
       </div>
     </div>
     <div class="text-sm text-content-secondary text-center xl:text-start">
@@ -108,7 +124,11 @@ const { class: className = "" } = Astro.props;
           credits.map((credit) => (
             <span>
               <TextLink
-                link={{ label: credit.name, url: credit.url }}
+                link={{
+                  label: credit.name,
+                  url: credit.url,
+                  trackEvent: credit.trackEvent,
+                }}
                 size="extraSmall"
                 track
               />

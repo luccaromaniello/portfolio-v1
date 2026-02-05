@@ -14,8 +14,14 @@ import nyxImage4 from "@assets/projects/nyx-4.png";
     <ProjectCard
       title="YZZO"
       description="A clipboard manager built for simplicity and productivity."
-      website={{ href: YZZO_LIVE_URL, external: true, track: true }}
+      website={{
+        href: YZZO_LIVE_URL,
+        external: true,
+        track: true,
+        trackEvent: "website-btn-yzzo",
+      }}
       repository={YZZO_REPO_URL}
+      repositoryTrackEvent="repository-btn-yzzo"
       images={[
         {
           src: yzzoImage,
@@ -27,6 +33,7 @@ import nyxImage4 from "@assets/projects/nyx-4.png";
       title="Nyx"
       description="A theme for Zed code editor."
       repository={NYX_REPO_URL}
+      repositoryTrackEvent="repository-btn-nyx"
       images={[
         {
           src: nyxImage1,

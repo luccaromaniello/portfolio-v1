@@ -34,6 +34,7 @@ const baseStyle = `
       aria-label={link.label}
       target={pathname === link.url ? "_self" : "_blank"}
       rel={track ? undefined : "noopener noreferrer"}
+      data-umami-event={link.trackEvent}
       class={`${buttonVariant[size]} ${baseStyle} ${cursive ? "font-caveat" : ""}`}
     >
       {link.label.trim()}
@@ -41,6 +42,7 @@ const baseStyle = `
   ) : (
     <button
       class={`email-link ${buttonVariant[size]} ${baseStyle} cursor-pointer`}
+      data-umami-event={link.trackEvent}
     >
       {link.label.trim()}
     </button>

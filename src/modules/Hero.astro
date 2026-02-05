@@ -44,6 +44,7 @@ import { baseSpacing } from "@constants";
           href={GITHUB_URL}
           theme="dark"
           external
+          trackEvent="github-btn-hero"
         />
         <ButtonLink
           icon="linkedin"
@@ -51,6 +52,7 @@ import { baseSpacing } from "@constants";
           href={LINKEDIN_URL}
           theme="dark"
           external
+          trackEvent="linkedin-btn-hero"
         />
         <div class="col-span-2 md:col-span-1">
           <ButtonLink
@@ -59,6 +61,7 @@ import { baseSpacing } from "@constants";
             href={MAIL_URL}
             theme="dark"
             copyToClipboard={MAIL_URL}
+            trackEvent="mail-btn-hero"
           />
         </div>
       </div>
@@ -84,6 +87,7 @@ import { baseSpacing } from "@constants";
             id="hero-image"
             loading="eager"
             fetchpriority="high"
+            data-umami-event="img-hero"
           />
           <video
             autoplay
