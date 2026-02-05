@@ -8,17 +8,17 @@ import { baseSpacing } from "@constants";
 ---
 
 <div
-  class={`${baseSpacing} text-white pt-12 md:pt-24 lg:pt-12 xl:pt-24 pb-12 md:pb-20 mb-24 md:mb-48 bg-neutral-primary overflow-visible`}
+  class={`${baseSpacing} text-white pt-12 md:pt-24 lg:pt-12 xl:pt-24 pb-12 md:pb-20 mb-16 md:mb-36 bg-neutral-primary overflow-visible`}
 >
   <div
     class="relative flex flex-col lg:flex-row gap-8 w-full justify-start mx-auto max-w-[1440px]"
   >
     <div
-      class="flex flex-col gap-8 md:gap-12 lg:gap-10 w-full pt-4 md:pt-10 pl-0 xl:pl-24"
+      class="flex flex-col gap-4 md:gap-12 lg:gap-10 w-full pt-4 md:pt-10 pl-0 xl:pl-24"
     >
       <h1
         data-text="Lucca Romaniello"
-        class="relative z-10 anaglyph text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-satoshi leading-tight font-bold
+        class="relative z-10 anaglyph text-start text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-satoshi leading-tight font-bold
               text-white tracking-wider uppercase"
       >
         Lucca Romaniello
@@ -30,13 +30,13 @@ import { baseSpacing } from "@constants";
           Full Stack Engineer with a product design background. 6+ years
           blending engineering and design.
         </p>
-        <p class="text-base text-content-tertiary lg:text-balance">
+        <p class="text-sm lg:text-base text-content-tertiary lg:text-balance">
           Based in Brazil, working globally. Open to full-time and freelance
           work.
         </p>
       </div>
       <div
-        class="flex flex-row flex-wrap justify-center lg:justify-start gap-4 md:gap-6 pt-4"
+        class="grid grid-cols-2 md:grid-cols-3 w-full lg:w-fit gap-4 md:gap-6 pt-4"
       >
         <ButtonLink
           icon="github"
@@ -52,19 +52,26 @@ import { baseSpacing } from "@constants";
           theme="dark"
           external
         />
-        <ButtonLink
-          icon="mail"
-          label="Contact"
-          href={MAIL_URL}
-          theme="dark"
-          copyToClipboard={MAIL_URL}
-        />
+        <div class="col-span-2 md:col-span-1">
+          <ButtonLink
+            icon="mail"
+            label="Contact"
+            href={MAIL_URL}
+            theme="dark"
+            copyToClipboard={MAIL_URL}
+          />
+        </div>
       </div>
     </div>
     <div
       class="relative lg:absolute md:right-20 lg:right-0 xl:right-72 2xl:right-24 w-full lg:w-[380px] xl:w-[480px] xl:h-[560px]"
     >
-      <div class="flex flex-col gap-4 justify-center text-center">
+      <div class="flex flex-col gap-3 md:gap-3 justify-center text-center">
+        <p
+          class="lg:hidden font-caveat text-xl text-content-secondary text-center mt-4"
+        >
+          Coffee's on me. Tap to grab yours.
+        </p>
         <div
           id="hero-media"
           oncontextmenu="return false"
@@ -91,7 +98,7 @@ import { baseSpacing } from "@constants";
           </p>
         </div>
         <div class="text-white lg:text-neutral-primary/90">
-          <p class="font-caveat text-2xl">
+          <p class="font-caveat text-xl lg:text-2xl">
             On most days, you’ll find me with some
             <TextLink
               link={{
@@ -104,23 +111,18 @@ import { baseSpacing } from "@constants";
             and a cup of coffee. No sugar.
           </p>
           <p
-            class="hidden xl:block absolute font-caveat text-2xl lg:bottom-84 xl:bottom-56 -right-42 rotate-90 text-content-secondary"
+            class="hidden xl:block absolute font-caveat text-2xl xl:bottom-60 -right-42 rotate-90 text-content-secondary"
           >
             Coffee's on me. Hover to grab yours.
           </p>
           <p
-            class="xl:hidden absolute font-caveat text-2xl lg:bottom-76 xl:bottom-52 -right-40 rotate-90 text-content-secondary"
+            class="hidden md:block xl:hidden absolute font-caveat text-xl md:bottom-74 right-0 md:-right-34 md:rotate-90 text-content-secondary"
           >
             Coffee's on me. Tap to grab yours.
           </p>
         </div>
       </div>
     </div>
-    <p
-      class="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/6 rotate-90 origin-center whitespace-nowrap font-caveat text-2xl text-content-secondary"
-    >
-      Coffee's on me. Tap to grab yours.
-    </p>
   </div>
 </div>
 
