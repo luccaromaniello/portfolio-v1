@@ -3,7 +3,7 @@ import { ButtonLink, TextLink } from "@components/ui";
 import { GITHUB_URL, LINKEDIN_URL, MAIL_URL } from "@constants";
 import { Image } from "astro:assets";
 import luccaImage from "@assets/lucca/lucca-sofa.jpg";
-import coffeeGif from "@assets/lucca/coffee-compressed.mp4";
+import coffeeGif from "@assets/lucca/coffee-optimized.mp4";
 import { baseSpacing } from "@constants";
 ---
 
@@ -93,6 +93,7 @@ import { baseSpacing } from "@constants";
             id="hero-video"
           >
             <source src={coffeeGif} type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           <p
             id="hero-video-text"
@@ -167,14 +168,31 @@ import { baseSpacing } from "@constants";
     }
   }
 
-  container?.addEventListener("mouseenter", showVideo);
-  container?.addEventListener("mouseleave", hideVideo);
+  let isTouch = false;
+
+  container?.addEventListener(
+    "touchstart",
+    () => {
+      isTouch = true;
+    },
+    { passive: true },
+  );
+
+  container?.addEventListener("mouseenter", () => {
+    if (!isTouch) showVideo();
+  });
+
+  container?.addEventListener("mouseleave", () => {
+    if (!isTouch) hideVideo();
+  });
 
   container?.addEventListener("click", () => {
+    if (!isTouch) return;
     if (playing) {
       hideVideo();
     } else {
       showVideo();
     }
+    isTouch = false;
   });
 </script>
