@@ -11,20 +11,20 @@
 
 @font-face {
   font-family: Satoshi;
-  font-display: optional;
-  src: url("fonts/Satoshi-Variable.woff2") format("woff2");
+  font-display: swap;
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Playfair Display";
-  font-display: optional;
-  src: url("fonts/PlayfairDisplay-Variable.woff2") format("woff2");
+  font-display: swap;
+  src: url("/fonts/PlayfairDisplay-Variable.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Caveat";
-  font-display: optional;
-  src: url("fonts/Caveat-Variable.woff2") format("woff2");
+  font-display: swap;
+  src: url("/fonts/Caveat-Variable.woff2") format("woff2");
 }
 
 @theme {
