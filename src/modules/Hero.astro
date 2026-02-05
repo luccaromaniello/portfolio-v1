@@ -134,18 +134,33 @@ import { baseSpacing } from "@constants";
     "hero-video-text",
   ) as HTMLParagraphElement;
 
-  container?.addEventListener("mouseenter", () => {
+  let playing = false;
+
+  function showVideo() {
     image.style.opacity = "0";
     video.style.opacity = "1";
     text.style.opacity = "1";
     video.currentTime = 0;
     video.play();
-  });
+    playing = true;
+  }
 
-  container?.addEventListener("mouseleave", () => {
+  function hideVideo() {
     image.style.opacity = "1";
     video.style.opacity = "0";
     text.style.opacity = "0";
     video.pause();
+    playing = false;
+  }
+
+  container?.addEventListener("mouseenter", showVideo);
+  container?.addEventListener("mouseleave", hideVideo);
+
+  container?.addEventListener("click", () => {
+    if (playing) {
+      hideVideo();
+    } else {
+      showVideo();
+    }
   });
 </script>
