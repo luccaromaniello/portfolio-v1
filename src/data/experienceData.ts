@@ -54,7 +54,7 @@ export const workExperience = [
     location: "Belo Horizonte, Brazil",
     description:
       "Mobile and backend development for Latin America's largest car rental company. Migrated apps from hybrid to native and built internal tools.",
-    technologies: ["Vue.js", "Kotlin", "Flutter", "C#", "ASP.NET"],
+    technologies: ["Vue.js", "Flutter", "Kotlin", "C#", "ASP.NET"],
     companies: [
       {
         name: "dti digital + Localiza&Co",
