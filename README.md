@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/luccaromaniello/portfolio-v1/blob/c26a72061b26d68cff1a332616a41ad4b626f742/src/assets/icons/lucca.png" width="100" />
+  <img alt="Logo" src="src/assets/icons/lucca.png" width="100" />
 </div>
 <h1 align="center">
   <a href="https://www.luccaromaniello.com" target="_blank">luccaromaniello.com</a> - v1
