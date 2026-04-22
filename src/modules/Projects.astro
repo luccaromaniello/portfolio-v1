@@ -1,7 +1,13 @@
 ---
 import Section from "@components/content/Section.astro";
 import ProjectCard from "@components/projects/ProjectCard.astro";
-import { YZZO_LIVE_URL, YZZO_REPO_URL, NYX_REPO_URL } from "@constants";
+import {
+  MINOSIA_LIVE_URL,
+  YZZO_LIVE_URL,
+  YZZO_REPO_URL,
+  NYX_REPO_URL,
+} from "@constants";
+import minosiaImage from "@assets/projects/minosia-overview.png";
 import yzzoImage from "@assets/projects/yzzo-overview.png";
 import nyxImage1 from "@assets/projects/nyx-1.png";
 import nyxImage2 from "@assets/projects/nyx-2.png";
@@ -11,6 +17,23 @@ import nyxImage4 from "@assets/projects/nyx-4.png";
 
 <Section heading="Selected work">
   <div class="flex flex-col gap-12">
+    <ProjectCard
+      title="Minosia"
+      description="A productivity kit that clears the noise."
+      website={{
+        href: MINOSIA_LIVE_URL,
+        external: true,
+        track: true,
+        trackEvent: "website-btn-minosia",
+      }}
+      images={[
+        {
+          src: minosiaImage,
+          alt: "An overview of Minosia's productivity kit.",
+        },
+      ]}
+      fitContent
+    />
     <ProjectCard
       title="YZZO"
       description="A clipboard manager built for simplicity and productivity."

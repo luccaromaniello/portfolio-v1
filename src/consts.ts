@@ -14,6 +14,7 @@ export const MAIL_URL = "contact@luccaromaniello.com";
 export const WEBSITE_URL = "https://www.luccaromaniello.com";
 
 // projects
+export const MINOSIA_LIVE_URL = "https://minosia.app";
 export const YZZO_LIVE_URL = "https://yzzo.app";
 export const YZZO_REPO_URL = "https://github.com/yzzoapps/yzzo";
 export const NYX_REPO_URL = "https://github.com/luccaromaniello/nyx";
