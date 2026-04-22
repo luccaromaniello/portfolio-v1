@@ -21,6 +21,7 @@ interface Props {
     alt: string;
   }[];
   even?: boolean;
+  fitContent?: boolean;
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   repository,
   repositoryTrackEvent,
   images,
+  fitContent = false,
 } = Astro.props;
 const hasCarousel = images.length > 1;
 ---
@@ -83,7 +85,7 @@ const hasCarousel = images.length > 1;
     </div>
 
     <div
-      class="relative overflow-hidden max-h-[720px]"
+      class={`relative overflow-hidden ${fitContent ? "" : "max-h-[720px]"}`}
       oncontextmenu="return false"
       data-carousel
     >
@@ -97,7 +99,7 @@ const hasCarousel = images.length > 1;
               <Image
                 src={img.src}
                 alt={img.alt}
-                class="h-full w-full object-cover"
+                class={`h-full w-full ${fitContent ? "object-contain" : "object-cover"}`}
               />
             </div>
           ))

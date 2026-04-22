@@ -10,17 +10,17 @@
     "tailwind": "astro add tailwind"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
-    "@astrojs/mdx": "^4.3.5",
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.5.1",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.7",
-    "sharp": "^0.34.3",
-    "tailwindcss": "^4.1.13"
+    "@astrojs/cloudflare": "12.6.12",
+    "@astrojs/mdx": "4.3.5",
+    "@astrojs/rss": "4.0.12",
+    "@astrojs/sitemap": "3.5.1",
+    "@tailwindcss/vite": "4.1.13",
+    "astro": "5.13.7",
+    "sharp": "0.34.3",
+    "tailwindcss": "4.1.13"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "@types/bun": "^1.2.21"
+    "@types/bun": "1.2.21"
   }
 }
