@@ -5,7 +5,7 @@ export const workExperience = [
     current: true,
     location: "Remote",
     description:
-      "Member of the Software Architecture team, working across multiple teams on full-stack development, defining frontend architecture, microfrontends, and design systems while building procurement platforms, workflow automation, and enterprise integrations with React and modern backend technologies.",
+      "Member of the Software Architecture team for a major Brazilian construction company. Collaborating across multiple teams on full-stack development, defining frontend architecture, microfrontends, design systems, workflow automation, and enterprise integrations.",
     technologies: [
       "Microfrontends",
       "Module Federation",
