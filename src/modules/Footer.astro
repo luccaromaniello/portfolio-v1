@@ -11,11 +11,18 @@ import {
   CREDIT_LOR_URL,
   CREDIT_MOONLOIN_URL,
   CREDIT_ALEX_URL,
+  MINOSIA_LIVE_URL,
 } from "@constants";
 import luccaIcon from "@assets/icons/lucca.png";
 import { Image } from "astro:assets";
 
 const workLinks = [
+  {
+    label: "Minosia",
+    url: MINOSIA_LIVE_URL,
+    track: true,
+    trackEvent: "minosia-link-footer",
+  },
   {
     label: "YZZO",
     url: YZZO_LIVE_URL,
@@ -68,12 +75,6 @@ const credits = [
     contribution: "Created Minosia and YZZO's brand",
     url: CREDIT_LOR_URL,
     trackEvent: "credit-lor-link-footer",
-  },
-  {
-    name: "Thais Bruna",
-    contribution: "Created my brand illustration",
-    url: CREDIT_MOONLOIN_URL,
-    trackEvent: "credit-thais-link-footer",
   },
 ];
 
