@@ -1,8 +1,35 @@
 export const workExperience = [
   {
     title: "Full Stack Engineer",
-    startDate: "Nov 25",
+    startDate: "May 26",
     current: true,
+    location: "Remote",
+    description:
+      "Member of the Software Architecture team, working across multiple teams on full-stack development, defining frontend architecture, microfrontends, and design systems while building procurement platforms, workflow automation, and enterprise integrations with React and modern backend technologies.",
+    technologies: [
+      "Microfrontends",
+      "Module Federation",
+      "React",
+      "TanStack Query",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+      "Vite",
+      "Vitest",
+      ".NET",
+      "C#",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "Azure DevOps"
+    ],
+    companies: [{ name: "Direcional Engenharia", website: "https://www.direcional.com.br/" }],
+  },
+  {
+    title: "Full Stack Engineer",
+    startDate: "Nov 25",
+    endDate: "May 26",
+    current: false,
     location: "Remote",
     description:
       "Full stack development for an independent financial advisory firm. Building internal tools for M&A contracts and operations with React/Next.js and Laravel.",
@@ -15,7 +42,7 @@ export const workExperience = [
       "TailwindCSS",
       "PHP",
       "Laravel",
-      "SQL",
+      "PostgreSQL",
       "Linux",
     ],
     companies: [{ name: "Araújo Fontes", website: "https://www.afs.com.br/" }],
@@ -54,7 +81,7 @@ export const workExperience = [
     location: "Belo Horizonte, Brazil",
     description:
       "Mobile and backend development for Latin America's largest car rental company. Migrated apps from hybrid to native and built internal tools.",
-    technologies: ["Vue.js", "Flutter", "Kotlin", "C#", "ASP.NET"],
+    technologies: ["Vue.js", "Flutter", "Kotlin", "C#", "ASP.NET", "Azure DevOps"],
     companies: [
       {
         name: "dti digital + Localiza&Co",
