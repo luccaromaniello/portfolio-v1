@@ -14,10 +14,6 @@
 		{
 			"pattern": "lucca.fyi",
 			"custom_domain": true
-		},
-		{
-			"pattern": "www.lucca.fyi",
-			"custom_domain": true
 		}
 	]
 }
