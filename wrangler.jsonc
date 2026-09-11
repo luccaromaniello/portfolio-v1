@@ -14,6 +14,10 @@
 		{
 			"pattern": "lucca.fyi",
 			"custom_domain": true
+		},
+		{
+			"pattern": "www.lucca.fyi/*",
+			"zone_name": "lucca.fyi"
 		}
 	]
 }
