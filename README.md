@@ -2,14 +2,14 @@
   <img alt="Logo" src="src/assets/icons/lucca.png" width="100" />
 </div>
 <h1 align="center">
-  <a href="https://www.luccaromaniello.com" target="_blank">luccaromaniello.com</a> - v1
+  <a href="https://www.lucca.fyi" target="_blank">lucca.fyi</a> - v1
 </h1>
 <p align="center">
-  The second version of <a href="https://www.luccaromaniello.com/" target="_blank">luccaromaniello.com</a> built with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://bun.com/" target="_blank">Bun</a>.
+  The second version of <a href="https://www.lucca.fyi/" target="_blank">lucca.fyi</a> built with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://bun.com/" target="_blank">Bun</a>.
 </p>
 <p align="center">
   Previous versions:
-  <a href="https://v0.luccaromaniello.com/" target="_blank">v0</a>
+  <a href="https://v0.lucca.fyi/" target="_blank">v0</a>
 </p>
 
 ## 🍴 Forking this repository
@@ -18,14 +18,13 @@ Feel free to fork this repository and customize it to your liking.
 
 The only thing I ask is that you give me credit for the original design and code by referencing it directly on your website or, at the very least, in your README file. And of course, please delete any files that are not relevant to your project.
 
-
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
+| Command               | Action                                           |
+| :-------------------- | :----------------------------------------------- |
+| `bun install`         | Installs dependencies                            |
 | `bun dev`             | Starts local dev server at `localhost:4321`      |
 | `bun build`           | Build your production site to `./dist/`          |
 | `bun preview`         | Preview your build locally, before deploying     |
