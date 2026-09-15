@@ -10,8 +10,8 @@ export const SITE_DESCRIPTION =
 
 export const GITHUB_URL = "https://www.github.com/luccaromaniello/";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/luccaromaniello/";
-export const MAIL_URL = "contact@luccaromaniello.com";
-export const WEBSITE_URL = "https://www.luccaromaniello.com";
+export const MAIL_URL = "lucca@romaniello.work";
+export const WEBSITE_URL = "https://www.lucca.fyi";
 
 // projects
 export const MINOSIA_LIVE_URL = "https://minosia.app";
@@ -19,7 +19,7 @@ export const YZZO_LIVE_URL = "https://yzzo.app";
 export const YZZO_REPO_URL = "https://github.com/yzzoapps/yzzo";
 export const NYX_REPO_URL = "https://github.com/luccaromaniello/nyx";
 
-export const PROJECT_PORTFOLIO_V0_URL = "https://www.v0.luccaromaniello.com";
+export const PROJECT_PORTFOLIO_V0_URL = "https://www.v0.lucca.fyi";
 
 export const CREDIT_ALEX_URL = "https://www.instagram.com/clicksdoalex";
 export const CREDIT_LOR_URL = "https://www.lorranebernardes.com/";
