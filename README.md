@@ -2,14 +2,14 @@
   <img alt="Logo" src="src/assets/icons/lucca.png" width="100" />
 </div>
 <h1 align="center">
-  <a href="https://www.lucca.fyi" target="_blank">lucca.fyi</a> - v1
+  <a href="https://www.romaniello.work" target="_blank">romaniello.work</a> - v1
 </h1>
 <p align="center">
-  The second version of <a href="https://www.lucca.fyi/" target="_blank">lucca.fyi</a> built with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://bun.com/" target="_blank">Bun</a>.
+  The second version of <a href="https://www.romaniello.work/" target="_blank">romaniello.work</a> built with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://bun.com/" target="_blank">Bun</a>.
 </p>
 <p align="center">
   Previous versions:
-  <a href="https://v0.lucca.fyi/" target="_blank">v0</a>
+  <a href="https://v0.romaniello.work/" target="_blank">v0</a>
 </p>
 
 ## 🍴 Forking this repository

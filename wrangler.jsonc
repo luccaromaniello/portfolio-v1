@@ -12,12 +12,12 @@
 	},
 	"routes": [
 		{
-			"pattern": "lucca.fyi",
+			"pattern": "romaniello.work",
 			"custom_domain": true
 		},
 		{
-			"pattern": "www.lucca.fyi/*",
-			"zone_name": "lucca.fyi"
+			"pattern": "www.romaniello.work/*",
+			"zone_name": "romaniello.work"
 		}
 	]
 }
